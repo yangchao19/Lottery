@@ -1,0 +1,4 @@
+com\yang\lottery\rpc\IActivityBooth.class
+com\yang\lottery\rpc\res\ActivityRes.class
+com\yang\lottery\rpc\dto\ActivityDto.class
+com\yang\lottery\rpc\req\ActivityReq.class
