@@ -2,6 +2,7 @@ package com.yang.lottery.test;
 
 import com.alibaba.fastjson.JSON;
 
+import com.yang.lottery.domain.strategy.model.res.DrawResult;
 import com.yang.lottery.infrastructure.dao.IActivityDao;
 import com.yang.lottery.infrastructure.po.Activity;
 import com.yang.lottery.rpc.IActivityBooth;

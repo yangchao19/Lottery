@@ -6,10 +6,10 @@ package com.yang.lottery.domain.strategy.model.req;
  * Description:抽奖请求类
  */
 public class DrawReq {
-    //用户id
+    /** 用户ID */
     private String uId;
 
-    //策略id
+    /** 策略id */
     private Long strategyId;
 
     public DrawReq() {

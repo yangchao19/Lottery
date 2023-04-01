@@ -6,13 +6,14 @@ import java.math.BigDecimal;
  * Date:2023/3/28
  * Author:YangChao
  * Description:奖品概率信息、奖品编号、库存、概率
+ * @author yc
  */
 public class AwardRateInfo {
 
-    //奖品ID
+    /** 奖品id */
     private String awardId;
 
-    //中奖概率
+    /**中奖概率*/
     private BigDecimal awardRate;
 
     public AwardRateInfo() {

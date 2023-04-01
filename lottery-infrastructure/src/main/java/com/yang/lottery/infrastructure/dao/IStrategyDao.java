@@ -7,8 +7,16 @@ import org.apache.ibatis.annotations.Mapper;
  * Date:2023/3/28
  * Author:YangChao
  * Description:
+ * @author yc
  */
 @Mapper
 public interface IStrategyDao {
-    Strategy queryStrategyById(Long strategyId);
+
+    /**
+     * 查询策略配置
+     *
+     * @param strategyId 策略ID
+     * @return           策略配置信息
+     */
+    Strategy queryStrategy(Long strategyId);
 }

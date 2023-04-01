@@ -1,31 +1,45 @@
 package com.yang.lottery.domain.strategy.model.res;
 
+import com.yang.lottery.common.Constants;
+import com.yang.lottery.domain.strategy.model.vo.DrawAwardInfo;
+
 /**
  * Date:2023/3/28
  * Author:YangChao
  * Description:抽奖结果类
+ * @author yc
  */
 public class DrawResult {
-    //用户id
+
+    /** 用户id */
     private String uId;
 
-    //策略id
+    /** 策略id */
     private Long strategyId;
 
-    //奖品id
-    private String rewardId;
 
-    //奖品名字
-    private String awardName;
+    /**
+     *  中奖状态 ：中奖状态：0未中奖、1已中奖、2兜底奖 Constants.DrawState
+     */
+    private Integer drawState = Constants.DrawState.FAIL.getCode();
+
+    /** 奖品名字 */
+    private DrawAwardInfo drawAwardInfo;
 
     public DrawResult() {
     }
 
-    public DrawResult(String uId, Long strategyId, String rewardId, String awardName) {
+    public DrawResult(String uId, Long strategyId, Integer drawState) {
         this.uId = uId;
         this.strategyId = strategyId;
-        this.rewardId = rewardId;
-        this.awardName = awardName;
+        this.drawState = drawState;
+    }
+
+    public DrawResult(String uId, Long strategyId, Integer drawState, DrawAwardInfo drawAwardInfo) {
+        this.uId = uId;
+        this.strategyId = strategyId;
+        this.drawState = drawState;
+        this.drawAwardInfo = drawAwardInfo;
     }
 
     public String getuId() {
@@ -44,19 +58,19 @@ public class DrawResult {
         this.strategyId = strategyId;
     }
 
-    public String getRewardId() {
-        return rewardId;
+    public Integer getDrawState() {
+        return drawState;
     }
 
-    public void setRewardId(String rewardId) {
-        this.rewardId = rewardId;
+    public void setDrawState(Integer drawState) {
+        this.drawState = drawState;
     }
 
-    public String getAwardName() {
-        return awardName;
+    public DrawAwardInfo getDrawAwardInfo() {
+        return drawAwardInfo;
     }
 
-    public void setAwardName(String awardName) {
-        this.awardName = awardName;
+    public void setDrawAwardInfo(DrawAwardInfo drawAwardInfo) {
+        this.drawAwardInfo = drawAwardInfo;
     }
 }

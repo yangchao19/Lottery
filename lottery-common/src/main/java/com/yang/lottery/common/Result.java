@@ -6,6 +6,7 @@ import java.io.Serializable;
  * Date:2023/3/26
  * Author:YangChao
  * Description:
+ * @author yc
  */
 public class Result implements Serializable {
     private static final long serialVersionUID = -3826891916021780628L;

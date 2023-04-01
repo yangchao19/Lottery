@@ -1,12 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.yang.lottery.infrastructure.dao.IAwardDao">
+    <resultMap id="awardMap" type="Award">
+        <id column="id" property="id"/>
+        <result column="award_id" property="awardId"/>
+        <result column="award_type" property="awardType"/>
+        <result column="award_name" property="awardName"/>
+        <result column="award_content" property="awardContent"/>
+        <result column="create_time" property="createTime"/>
+        <result column="update_time" property="updateTime"/>
+    </resultMap>
 
-    <select id="queryAwardById" parameterType="java.lang.String" resultType="Award">
+    <select id="queryAwardInfo" parameterType="java.lang.String" resultMap="awardMap">
         SELECT
-        id,awardId,awardType,awardCounT,awardName,awardContent,createTime,updateTime
-        FROM sward
-        WHERE awardId = #{awardId}
+        id, award_id, award_type, award_name, award_content
+        FROM award
+        WHERE award_id = #{awardId}
     </select>
 
 

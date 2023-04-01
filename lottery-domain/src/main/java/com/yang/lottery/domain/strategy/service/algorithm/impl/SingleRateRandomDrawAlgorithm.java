@@ -10,8 +10,9 @@ import java.util.List;
  * Date:2023/3/28
  * Author:YangChao
  * Description:
+ * @author yc
  */
-@Component("SingleRateRandomDrawAlgorithm")
+@Component("singleRateRandomDrawAlgorithm")
 public class SingleRateRandomDrawAlgorithm extends BaseAlgorithm {
     @Override
     public String randomDraw(Long strategyId, List<String> excludeAwardIds) {
@@ -26,7 +27,9 @@ public class SingleRateRandomDrawAlgorithm extends BaseAlgorithm {
 
 
         String awardId = rateTuple[idx];
-        if (excludeAwardIds.contains(awardId)) return "未中奖";
+        if (excludeAwardIds.contains(awardId)) {
+            return "未中奖";
+        }
 
         return awardId;
     }

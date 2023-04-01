@@ -9,6 +9,7 @@ import java.util.List;
  * Date:2023/3/28
  * Author:YangChao
  * Description:抽奖策略相关所有信息
+ * @author yc
  */
 public class StrategyRich {
     private Long StrategyId;
