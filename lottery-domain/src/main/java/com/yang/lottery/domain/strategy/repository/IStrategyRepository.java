@@ -1,7 +1,7 @@
 package com.yang.lottery.domain.strategy.repository;
 
 import com.yang.lottery.domain.strategy.model.aggregates.StrategyRich;
-import com.yang.lottery.infrastructure.po.Award;
+import com.yang.lottery.domain.strategy.model.vo.AwardBriefVO;
 
 import java.util.List;
 
@@ -24,7 +24,7 @@ public interface IStrategyRepository {
      * @param awardId 奖品id
      * @return award
      */
-    Award queryAwardInfo(String awardId);
+    AwardBriefVO queryAwardInfo(String awardId);
 
     /**
      * 查询奖品数量为空的奖品

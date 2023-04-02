@@ -1,7 +1,7 @@
 package com.yang.lottery.domain.strategy.model.aggregates;
 
-import com.yang.lottery.infrastructure.po.Strategy;
-import com.yang.lottery.infrastructure.po.StrategyDetail;
+import com.yang.lottery.domain.strategy.model.vo.StrategyBriefVO;
+import com.yang.lottery.domain.strategy.model.vo.StrategyDetailBriefVO;
 
 import java.util.List;
 
@@ -14,16 +14,16 @@ import java.util.List;
 public class StrategyRich {
     private Long StrategyId;
 
-    private Strategy strategy;
+    private StrategyBriefVO strategyBriefVO;
 
-    private List<StrategyDetail> strategyDetailList;
+    private List<StrategyDetailBriefVO> strategyDetailBriefVOListlList;
 
     public StrategyRich() {}
 
-    public StrategyRich(Long strategyId, Strategy strategy, List<StrategyDetail> strategyDetailList) {
+    public StrategyRich(Long strategyId, StrategyBriefVO strategyBriefVO, List<StrategyDetailBriefVO> strategyDetailList) {
         StrategyId = strategyId;
-        this.strategy = strategy;
-        this.strategyDetailList = strategyDetailList;
+        this.strategyBriefVO = strategyBriefVO;
+        this.strategyDetailBriefVOListlList = strategyDetailList;
     }
 
     public Long getStrategyId() {
@@ -34,19 +34,19 @@ public class StrategyRich {
         StrategyId = strategyId;
     }
 
-    public Strategy getStrategy() {
-        return strategy;
+    public StrategyBriefVO getStrategy() {
+        return strategyBriefVO;
     }
 
-    public void setStrategy(Strategy strategy) {
-        this.strategy = strategy;
+    public void setStrategy(StrategyBriefVO strategyBriefVO) {
+        this.strategyBriefVO = strategyBriefVO;
     }
 
-    public List<StrategyDetail> getStrategyDetailList() {
-        return strategyDetailList;
+    public List<StrategyDetailBriefVO> getStrategyDetailList() {
+        return strategyDetailBriefVOListlList;
     }
 
-    public void setStrategyDetailList(List<StrategyDetail> strategyDetailList) {
-        this.strategyDetailList = strategyDetailList;
+    public void setStrategyDetailList(List<StrategyDetailBriefVO> strategyDetailList) {
+        this.strategyDetailBriefVOListlList = strategyDetailList;
     }
 }

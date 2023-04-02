@@ -35,4 +35,6 @@ public interface IStrategyDetailDao {
      * @return                  返回结果
      */
     int deductStock(StrategyDetail strategyDetailReq);
+
+    void insertList(List<StrategyDetail> list);
 }

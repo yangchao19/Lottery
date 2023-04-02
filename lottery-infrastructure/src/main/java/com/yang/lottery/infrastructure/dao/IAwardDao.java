@@ -3,6 +3,8 @@ package com.yang.lottery.infrastructure.dao;
 import com.yang.lottery.infrastructure.po.Award;
 import org.apache.ibatis.annotations.Mapper;
 
+import java.util.List;
+
 /**
  * Date:2023/3/28
  * Author:YangChao
@@ -17,5 +19,11 @@ public interface IAwardDao {
      * @param awardId 奖品ID
      * @return        奖品信息
      */
-    Award queryAwardInfo(String AwardId);
+    Award queryAwardInfo(String awardId);
+
+    /**
+     * 将奖品信息配置
+     * @param awardList 奖品配置
+     */
+    void insertList(List<Award> awardList);
 }

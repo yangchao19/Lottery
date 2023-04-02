@@ -1,8 +1,8 @@
 package com.yang.lottery.domain.strategy.service.draw;
 
 import com.yang.lottery.domain.strategy.model.aggregates.StrategyRich;
+import com.yang.lottery.domain.strategy.model.vo.AwardBriefVO;
 import com.yang.lottery.domain.strategy.repository.IStrategyRepository;
-import com.yang.lottery.infrastructure.po.Award;
 
 import javax.annotation.Resource;
 
@@ -32,7 +32,7 @@ public class DrawStrategySupport {
      * @param awardId 奖品ID
      * @return 中奖详情
      */
-    protected Award queryAwardInfoByAwardId(String awardId) {
+    protected AwardBriefVO queryAwardInfoByAwardId(String awardId) {
         return strategyRepository.queryAwardInfo(awardId);
     }
 }

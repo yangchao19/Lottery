@@ -1,6 +1,9 @@
-package com.yang.lottery.domain.strategy.repository.impl;
+package com.yang.lottery.infrastructure.repository;
 
 import com.yang.lottery.domain.strategy.model.aggregates.StrategyRich;
+import com.yang.lottery.domain.strategy.model.vo.AwardBriefVO;
+import com.yang.lottery.domain.strategy.model.vo.StrategyBriefVO;
+import com.yang.lottery.domain.strategy.model.vo.StrategyDetailBriefVO;
 import com.yang.lottery.domain.strategy.repository.IStrategyRepository;
 import com.yang.lottery.infrastructure.dao.IAwardDao;
 import com.yang.lottery.infrastructure.dao.IStrategyDao;
@@ -8,9 +11,11 @@ import com.yang.lottery.infrastructure.dao.IStrategyDetailDao;
 import com.yang.lottery.infrastructure.po.Award;
 import com.yang.lottery.infrastructure.po.Strategy;
 import com.yang.lottery.infrastructure.po.StrategyDetail;
+import org.springframework.beans.BeanUtils;
 import org.springframework.stereotype.Component;
 
 import javax.annotation.Resource;
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -39,13 +44,30 @@ public class StrategyRepository implements IStrategyRepository {
 
         List<StrategyDetail> strategyDetails = strategyDetailDao.queryStrategyDetailList(strategyId);
 
-        return new StrategyRich(strategyId,strategy,strategyDetails);
+        StrategyBriefVO strategyBriefVO = new StrategyBriefVO();
+        BeanUtils.copyProperties(strategy,strategyBriefVO);
+
+        List<StrategyDetailBriefVO> strategyDetailBriefVOList = new ArrayList<>();
+
+        for( StrategyDetail strategyDetail : strategyDetails) {
+            StrategyDetailBriefVO strategyDetailBriefVO = new StrategyDetailBriefVO();
+            BeanUtils.copyProperties(strategyDetail,strategyBriefVO);
+            strategyDetailBriefVOList.add(strategyDetailBriefVO);
+        }
+
+        return new StrategyRich(strategyId,strategyBriefVO,strategyDetailBriefVOList);
     }
 
     @Override
-    public Award queryAwardInfo(String awardId) {
+    public AwardBriefVO queryAwardInfo(String awardId) {
+        Award award = awardDao.queryAwardInfo(awardId);
+        AwardBriefVO awardBriefVO = new AwardBriefVO();
 
-        return awardDao.queryAwardInfo(awardId);
+        awardBriefVO.setAwardId(award.getAwardId());
+        awardBriefVO.setAwardName(award.getAwardName());
+        awardBriefVO.setAwardType(award.getAwardType());
+        awardBriefVO.setAwardContent(award.getAwardContent());
+        return awardBriefVO;
     }
 
     @Override
