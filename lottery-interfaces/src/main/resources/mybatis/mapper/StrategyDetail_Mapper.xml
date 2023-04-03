@@ -14,13 +14,13 @@
         <result column="update_time" property="updateTime"/>
     </resultMap>
 
-    strategyId,awardId,awardName,awardCount,awardSurplusCount,awardRate;
     <insert id="insertList" parameterType="java.util.List">
-        INSERT INTO ()
+        INSERT INTO strategy_detail(strategy_id, award_id, award_name, award_count, award_surplus_count,
+        award_rate, create_time, update_time)
         VALUES
         <foreach collection="list" item="item" index="item" separator=",">
             (
-            #{strategyId},#{awardId},#{awardName},#{awardCount},#{awardSurplusCount},#{awardRate}
+            #{strategyId},#{awardId},#{awardName},#{awardCount},#{awardSurplusCount},#{awardRate},NOW,NOW
             )
         </foreach>
     </insert>
@@ -42,4 +42,5 @@
         FROM strategy_detail
         WHERE strategy_id = #{strategyId} AND award_surplus_count = 0
     </select>
+
 </mapper>

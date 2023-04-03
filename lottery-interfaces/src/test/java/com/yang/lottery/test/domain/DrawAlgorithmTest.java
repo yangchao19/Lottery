@@ -1,4 +1,4 @@
-package com.yang.lottery.test;
+package com.yang.lottery.test.domain;
 
 
 import com.yang.lottery.domain.strategy.model.vo.AwardRateInfo;

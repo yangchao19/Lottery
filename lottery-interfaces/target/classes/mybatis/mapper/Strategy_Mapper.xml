@@ -14,6 +14,11 @@
         <result column="create_time" property="createTime"/>
         <result column="update_time" property="updateTime"/>
     </resultMap>
+    <insert id="insertStrategy">
+        INSERT INTO(strategy_id,strategy_mode,strategy_desc,grantType,grantDate,exInfo,creat_time,update_time)
+        VALUES (#{strategyId},#{strategyMode},#{strategyDesc},#{grantType},
+                #{grantDate},#{extInfo},NOW(),NOW())
+    </insert>
 
     <select id="queryStrategy" parameterType="java.lang.Long" resultMap="strategyMap">
         SELECT

@@ -1,7 +1,7 @@
 package com.yang.lottery.domain.award.model.req;
 
 import com.yang.lottery.domain.award.model.vo.ShippingAddress;
-import com.yang.lottery.infrastructure.po.Strategy;
+
 
 /**
  * @description:
