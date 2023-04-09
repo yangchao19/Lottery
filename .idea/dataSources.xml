@@ -13,5 +13,11 @@
       <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
       <jdbc-url>jdbc:mysql://localhost:3306/lottery_01</jdbc-url>
     </data-source>
+    <data-source source="LOCAL" name="lottery_02@localhost" uuid="264f7bae-18bf-4120-bbb7-473d2d997d0e">
+      <driver-ref>mysql.8</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://localhost:3306/lottery_02</jdbc-url>
+    </data-source>
   </component>
 </project>
