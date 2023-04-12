@@ -3,7 +3,7 @@ package com.yang.lottery.domain.activity.model.vo;
 import java.math.BigDecimal;
 
 /**
- * @description:
+ * @description: 策略详细配置
  * @author：杨超
  * @date: 2023/4/2
  * @Copyright：

@@ -4,6 +4,9 @@ import com.yang.lottery.common.Constants;
 import com.yang.lottery.common.Result;
 import com.yang.lottery.domain.activity.service.stateflow.IStateHandler;
 import com.yang.lottery.domain.activity.service.stateflow.StateConfig;
+import org.springframework.stereotype.Service;
+
+import javax.annotation.Resource;
 
 /**
  * @description:
@@ -11,6 +14,7 @@ import com.yang.lottery.domain.activity.service.stateflow.StateConfig;
  * @date: 2023/4/3
  * @Copyright：
  */
+@Service
 public class StateHandlerImpl extends StateConfig implements IStateHandler {
     @Override
     public Result arraignment(Long activityId, Enum<Constants.ActivityState> currentStatus) {

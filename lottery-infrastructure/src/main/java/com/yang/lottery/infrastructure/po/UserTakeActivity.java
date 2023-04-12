@@ -50,6 +50,17 @@ public class UserTakeActivity {
      */
     private Date updateTime;
 
+    /**
+     * 活动单使用状态 0：未使用 1：已使用
+     * Constants.TaskState
+     */
+    private Integer state;
+
+    /**
+     * 策略id
+     */
+    private Long StrategyId;
+
 
     public Long getId() {
         return id;
@@ -131,4 +142,19 @@ public class UserTakeActivity {
         this.updateTime = updateTime;
     }
 
+    public Integer getState() {
+        return state;
+    }
+
+    public void setState(Integer state) {
+        this.state = state;
+    }
+
+    public Long getStrategyId() {
+        return StrategyId;
+    }
+
+    public void setStrategyId(Long strategyId) {
+        StrategyId = strategyId;
+    }
 }

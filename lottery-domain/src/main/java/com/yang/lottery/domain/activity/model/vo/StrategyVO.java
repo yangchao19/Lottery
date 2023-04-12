@@ -5,7 +5,7 @@ import java.util.Date;
 import java.util.List;
 
 /**
- * @description:
+ * @description: 策略信息配置
  * @author：杨超
  * @date: 2023/4/2
  * @Copyright：
@@ -14,7 +14,7 @@ public class StrategyVO {
     /**
      * 策略id
      */
-    private String strategyId;
+    private Long strategyId;
     /**
      * 策略模式
      */
@@ -34,17 +34,17 @@ public class StrategyVO {
     /**
      * 拓展信息
      */
-    private String exInfo;
+    private String extInfo;
     /**
      * 策略详细配置
      */
     private List<StrategyDetailVO> strategyDetailList;
 
-    public String getStrategyId() {
+    public Long getStrategyId() {
         return strategyId;
     }
 
-    public void setStrategyId(String strategyId) {
+    public void setStrategyId(Long strategyId) {
         this.strategyId = strategyId;
     }
 
@@ -80,12 +80,12 @@ public class StrategyVO {
         this.grantDate = grantDate;
     }
 
-    public String getExInfo() {
-        return exInfo;
+    public String getExtInfo() {
+        return extInfo;
     }
 
-    public void setExInfo(String exInfo) {
-        this.exInfo = exInfo;
+    public void setExtInfo(String extInfo) {
+        this.extInfo = extInfo;
     }
 
     public List<StrategyDetailVO> getStrategyDetailList() {
@@ -104,7 +104,7 @@ public class StrategyVO {
                 ", strategyDesc='" + strategyDesc + '\'' +
                 ", grantType=" + grantType +
                 ", grantDate=" + grantDate +
-                ", exInfo='" + exInfo + '\'' +
+                ", extInfo='" + extInfo + '\'' +
                 ", strategyDetailList=" + strategyDetailList +
                 '}';
     }

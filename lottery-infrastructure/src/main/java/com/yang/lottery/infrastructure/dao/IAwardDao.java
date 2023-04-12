@@ -23,7 +23,7 @@ public interface IAwardDao {
 
     /**
      * 将奖品信息配置
-     * @param awardList 奖品配置
+     * @param list 奖品配置
      */
-    void insertList(List<Award> awardList);
+    void insertList(List<Award> list);
 }

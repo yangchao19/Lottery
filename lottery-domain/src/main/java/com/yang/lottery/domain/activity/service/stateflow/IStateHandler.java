@@ -13,7 +13,7 @@ public interface IStateHandler {
     /**
      * 提审
      * @param activityId    活动ID
-     * @param currentState 当前状态
+     * @param currentStatus 当前状态
      * @return             审核结果
      */
     Result arraignment(Long activityId, Enum<Constants.ActivityState> currentStatus);

@@ -3,7 +3,7 @@ package com.yang.lottery.domain.activity.model.vo;
 import java.util.Date;
 
 /**
- * @description:
+ * @description: 活动信息配置
  * @author：杨超
  * @date: 2023/4/2
  * @Copyright：

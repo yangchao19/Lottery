@@ -1,7 +1,9 @@
 package com.yang.lottery.domain.strategy.model.vo;
 
+import java.util.Date;
+
 /**
- * @description:
+ * @description: 中奖奖品信息
  * @author：杨超
  * @date: 2023/3/31
  * @Copyright：
@@ -26,6 +28,24 @@ public class DrawAwardInfo {
      * 奖品内容「描述、奖品码、sku」
      */
     private String awardContent;
+
+    /**
+     * 策略方式（单项概率、总体概率）
+     */
+    private Integer strategyMode;
+
+    /**
+     * 发放奖品方式（即时，定时，人工）
+     */
+    private Integer grantType;
+
+    /**
+     * 发奖时间
+     */
+    private Date grantDate;
+
+    public DrawAwardInfo() {
+    }
 
     public DrawAwardInfo(String awardId, Integer awardType, String awardName, String awardContent) {
         this.awardId = awardId;
@@ -64,5 +84,29 @@ public class DrawAwardInfo {
 
     public void setAwardContent(String awardContent) {
         this.awardContent = awardContent;
+    }
+
+    public Integer getStrategyMode() {
+        return strategyMode;
+    }
+
+    public void setStrategyMode(Integer strategyMode) {
+        this.strategyMode = strategyMode;
+    }
+
+    public Integer getGrantType() {
+        return grantType;
+    }
+
+    public void setGrantType(Integer grantType) {
+        this.grantType = grantType;
+    }
+
+    public Date getGrantDate() {
+        return grantDate;
+    }
+
+    public void setGrantDate(Date grantDate) {
+        this.grantDate = grantDate;
     }
 }

@@ -51,7 +51,7 @@ public class StrategyRepository implements IStrategyRepository {
 
         for( StrategyDetail strategyDetail : strategyDetails) {
             StrategyDetailBriefVO strategyDetailBriefVO = new StrategyDetailBriefVO();
-            BeanUtils.copyProperties(strategyDetail,strategyBriefVO);
+            BeanUtils.copyProperties(strategyDetail,strategyDetailBriefVO);
             strategyDetailBriefVOList.add(strategyDetailBriefVO);
         }
 

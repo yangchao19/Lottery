@@ -31,13 +31,13 @@ public class UserTakeActivityDaoTest {
     @Test
     public void test_insert() {
         UserTakeActivity userTakeActivity = new UserTakeActivity();
-        userTakeActivity.setuId("Ukdli109op89oi"); // 1库：Ukdli109op89oi 2库：Ukdli109op811d
+        userTakeActivity.setuId("Ukdli109op811d"); // 1库：Ukdli109op89oi 2库：Ukdli109op811d
         userTakeActivity.setTakeId(121019889410L);
         userTakeActivity.setActivityId(100001L);
         userTakeActivity.setActivityName("测试活动");
         userTakeActivity.setTakeDate(new Date());
         userTakeActivity.setTakeCount(10);
-        userTakeActivity.setUuid("Ukdli109op89oi");
+        userTakeActivity.setUuid("Ukdli109op811d");
 
         userTakeActivityDao.insert(userTakeActivity);
     }

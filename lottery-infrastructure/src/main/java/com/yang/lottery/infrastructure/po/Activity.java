@@ -29,8 +29,13 @@ public class Activity {
     // 库存
     private Integer stockCount;
 
+    private Integer stockSurplusCount;
+
     // 每人可参与次数
     private Integer takeCount;
+
+
+    private Long strategyId;
 
     // 活动状态：编辑、提审、撤审、通过、运行、拒绝、关闭、开启
     private Integer state;
@@ -98,6 +103,22 @@ public class Activity {
 
     public void setStockCount(Integer stockCount) {
         this.stockCount = stockCount;
+    }
+
+    public Integer getStockSurplusCount() {
+        return stockSurplusCount;
+    }
+
+    public void setStockSurplusCount(Integer stockSurplusCount) {
+        this.stockSurplusCount = stockSurplusCount;
+    }
+
+    public Long getStrategyId() {
+        return strategyId;
+    }
+
+    public void setStrategyId(Long strategyId) {
+        this.strategyId = strategyId;
     }
 
     public Integer getTakeCount() {

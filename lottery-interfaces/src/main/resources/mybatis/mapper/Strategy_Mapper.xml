@@ -14,8 +14,10 @@
         <result column="create_time" property="createTime"/>
         <result column="update_time" property="updateTime"/>
     </resultMap>
-    <insert id="insertStrategy">
-        INSERT INTO(strategy_id,strategy_mode,strategy_desc,grantType,grantDate,exInfo,creat_time,update_time)
+
+    <insert id="insertStrategy" parameterType="Strategy">
+        INSERT INTO strategy(strategy_id,strategy_mode,strategy_desc,grant_type,
+                grant_date,ext_info,create_time,update_time)
         VALUES (#{strategyId},#{strategyMode},#{strategyDesc},#{grantType},
                 #{grantDate},#{extInfo},NOW(),NOW())
     </insert>

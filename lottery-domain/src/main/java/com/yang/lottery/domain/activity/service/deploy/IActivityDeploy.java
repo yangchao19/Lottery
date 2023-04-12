@@ -3,7 +3,7 @@ package com.yang.lottery.domain.activity.service.deploy;
 import com.yang.lottery.domain.activity.model.req.ActivityConfigReq;
 
 /**
- * @description:
+ * @description: 部署活动配置接口
  * @author：杨超
  * @date: 2023/4/2
  * @Copyright：
@@ -13,7 +13,7 @@ public interface IActivityDeploy {
      * 创建活动
      * @param req 活动配置信息
      */
-    void creatActivity(ActivityConfigReq req);
+    void createActivity(ActivityConfigReq req);
 
     /**
      * 更新活动信息

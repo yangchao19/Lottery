@@ -12,6 +12,7 @@ import com.alibaba.fastjson.JSON;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.dao.DuplicateKeyException;
+import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import javax.annotation.Resource;
@@ -23,6 +24,7 @@ import java.util.List;
  * @date: 2023/4/2
  * @Copyright：
  */
+@Service
 public class ActivityDeployImpl implements IActivityDeploy {
 
     private Logger logger = LoggerFactory.getLogger(ActivityDeployImpl.class);
@@ -33,7 +35,7 @@ public class ActivityDeployImpl implements IActivityDeploy {
 
     @Transactional(rollbackFor = Exception.class)
     @Override
-    public void creatActivity(ActivityConfigReq req) {
+    public void createActivity(ActivityConfigReq req) {
 
         logger.info("创建活动配置开始，activityId:{}",req.getActivityId());
 

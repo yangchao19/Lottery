@@ -20,7 +20,8 @@
         VALUES
         <foreach collection="list" item="item" index="item" separator=",">
             (
-            #{strategyId},#{awardId},#{awardName},#{awardCount},#{awardSurplusCount},#{awardRate},NOW,NOW
+            #{item.strategyId},#{item.awardId},#{item.awardName},#{item.awardCount},
+            #{item.awardSurplusCount},#{item.awardRate},NOW(),NOW()
             )
         </foreach>
     </insert>

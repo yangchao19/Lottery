@@ -1,7 +1,7 @@
 package com.yang.lottery.domain.activity.model.vo;
 
 /**
- * @description:
+ * @description: 变更活动状态对象
  * @author：杨超
  * @date: 2023/4/2
  * @Copyright：
