@@ -2,6 +2,7 @@ package com.yang.lottery.infrastructure.repository;
 
 import com.yang.lottery.domain.award.repository.IAwardRepository;
 import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Repository;
 
 /**
  * @description:
@@ -9,6 +10,6 @@ import org.springframework.stereotype.Component;
  * @date: 2023/3/31
  * @Copyright：
  */
-@Component
+@Repository
 public class AwardRepository implements IAwardRepository {
 }

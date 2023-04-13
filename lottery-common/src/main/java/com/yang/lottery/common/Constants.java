@@ -33,6 +33,45 @@ public class Constants {
 
     }
 
+    /**
+     * 全局属性
+     */
+    public static final class Global {
+        /**空节点值*/
+        public static final Long TREE_NULL_NODE = 0L;
+    }
+
+
+    /**
+     * 决策树节点
+     */
+    public static final class NodeType {
+
+        /**树茎*/
+        public static final Integer STEM = 1;
+
+        /**果实*/
+        public static final Integer FRUIT = 2;
+    }
+
+    /**
+     * 规则限定类型
+     */
+    public static final class RuleLimitType {
+
+        public static final int EQUAL = 1;
+
+        public static final int GT = 2;
+
+        public static final int LT = 3;
+
+        public static final int GE = 4;
+
+        public static final int LE = 5;
+
+        public static final int ENUM = 6;
+    }
+
 
     /**
      * 活动状态：1编辑、2提审、3撤审、4通过、5运行(审核通过后worker扫描状态)、6拒绝、7关闭、8开启

@@ -9,6 +9,7 @@ import com.yang.lottery.infrastructure.dao.*;
 import com.yang.lottery.infrastructure.po.*;
 import org.springframework.beans.BeanUtils;
 import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Repository;
 
 import javax.annotation.Resource;
 import java.util.ArrayList;
@@ -20,7 +21,7 @@ import java.util.List;
  * @date: 2023/4/2
  * @Copyright：
  */
-@Component
+@Repository
 public class ActivityRepository implements IActivityRepository {
     @Resource
     private IActivityDao activityDao;
