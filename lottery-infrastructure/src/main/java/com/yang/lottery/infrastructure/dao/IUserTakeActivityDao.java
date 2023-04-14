@@ -26,6 +26,7 @@ public interface IUserTakeActivityDao {
      * @param userTakeActivity
      * @return
      */
+    @DBRouter(key = "uId")
     int lockTackActivity(UserTakeActivity userTakeActivity);
 
     /**
@@ -33,7 +34,7 @@ public interface IUserTakeActivityDao {
      * 查询此活动ID，用户最早领取但未消费的一条记录【这部分一般会有业务流程限制，比如是否处理最先还是最新领取单，要根据自己的业务实际场景进行处理】
      * @param userTakeActivity
      * @return 领取结果
-     */
+     */@DBRouter(key = "uId")
     UserTakeActivity queryNoConsumedTakeActivityOrder(UserTakeActivity userTakeActivity);
 
 }

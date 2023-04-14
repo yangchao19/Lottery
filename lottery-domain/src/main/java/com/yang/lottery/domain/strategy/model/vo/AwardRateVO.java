@@ -8,7 +8,7 @@ import java.math.BigDecimal;
  * Description:奖品概率信息、奖品编号、库存、概率
  * @author yc
  */
-public class AwardRateInfo {
+public class AwardRateVO {
 
     /** 奖品id */
     private String awardId;
@@ -16,10 +16,10 @@ public class AwardRateInfo {
     /**中奖概率*/
     private BigDecimal awardRate;
 
-    public AwardRateInfo() {
+    public AwardRateVO() {
     }
 
-    public AwardRateInfo(String awardId, BigDecimal awardRate) {
+    public AwardRateVO(String awardId, BigDecimal awardRate) {
         this.awardId = awardId;
         this.awardRate = awardRate;
     }

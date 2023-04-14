@@ -2,7 +2,7 @@ package com.yang.lottery.application.process.res;
 
 
 import com.yang.lottery.common.Result;
-import com.yang.lottery.domain.strategy.model.vo.DrawAwardInfo;
+import com.yang.lottery.domain.strategy.model.vo.DrawAwardVO;
 
 /**
  * @description:
@@ -12,22 +12,22 @@ import com.yang.lottery.domain.strategy.model.vo.DrawAwardInfo;
  */
 public class DrawProcessResult extends Result {
 
-    private DrawAwardInfo drawAwardInfo;
+    private DrawAwardVO drawAwardVO;
 
     public DrawProcessResult(String code, String info) {
         super(code, info);
     }
 
-    public DrawProcessResult(String code, String info, DrawAwardInfo drawAwardInfo) {
+    public DrawProcessResult(String code, String info, DrawAwardVO drawAwardVO) {
         super(code, info);
-        this.drawAwardInfo = drawAwardInfo;
+        this.drawAwardVO = drawAwardVO;
     }
 
-    public DrawAwardInfo getDrawAwardInfo() {
-        return drawAwardInfo;
+    public DrawAwardVO getDrawAwardVO() {
+        return drawAwardVO;
     }
 
-    public void setDrawAwardInfo(DrawAwardInfo drawAwardInfo) {
-        this.drawAwardInfo = drawAwardInfo;
+    public void setDrawAwardVO(DrawAwardVO drawAwardVO) {
+        this.drawAwardVO = drawAwardVO;
     }
 }

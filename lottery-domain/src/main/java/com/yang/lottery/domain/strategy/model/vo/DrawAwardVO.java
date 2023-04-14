@@ -8,7 +8,12 @@ import java.util.Date;
  * @date: 2023/3/31
  * @Copyright：
  */
-public class DrawAwardInfo {
+public class DrawAwardVO {
+
+    /**
+     * 用户id
+     */
+    private String uId;
     /**
      * 奖品ID
      */
@@ -44,14 +49,30 @@ public class DrawAwardInfo {
      */
     private Date grantDate;
 
-    public DrawAwardInfo() {
+    public DrawAwardVO() {
     }
 
-    public DrawAwardInfo(String awardId, Integer awardType, String awardName, String awardContent) {
+    public DrawAwardVO(String awardId, Integer awardType, String awardName, String awardContent) {
         this.awardId = awardId;
         this.awardType = awardType;
         this.awardName = awardName;
         this.awardContent = awardContent;
+    }
+
+    public DrawAwardVO(String uId, String awardId, Integer awardType, String awardName, String awardContent) {
+        this.uId = uId;
+        this.awardId = awardId;
+        this.awardType = awardType;
+        this.awardName = awardName;
+        this.awardContent = awardContent;
+    }
+
+    public String getuId() {
+        return uId;
+    }
+
+    public void setuId(String uId) {
+        this.uId = uId;
     }
 
     public String getAwardId() {

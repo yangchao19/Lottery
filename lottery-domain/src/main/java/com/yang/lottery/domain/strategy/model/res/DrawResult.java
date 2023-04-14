@@ -1,7 +1,7 @@
 package com.yang.lottery.domain.strategy.model.res;
 
 import com.yang.lottery.common.Constants;
-import com.yang.lottery.domain.strategy.model.vo.DrawAwardInfo;
+import com.yang.lottery.domain.strategy.model.vo.DrawAwardVO;
 
 /**
  * Date:2023/3/28
@@ -24,7 +24,7 @@ public class DrawResult {
     private Integer drawState = Constants.DrawState.FAIL.getCode();
 
     /** 奖品名字 */
-    private DrawAwardInfo drawAwardInfo;
+    private DrawAwardVO drawAwardVO;
 
     public DrawResult() {
     }
@@ -35,11 +35,11 @@ public class DrawResult {
         this.drawState = drawState;
     }
 
-    public DrawResult(String uId, Long strategyId, Integer drawState, DrawAwardInfo drawAwardInfo) {
+    public DrawResult(String uId, Long strategyId, Integer drawState, DrawAwardVO drawAwardVO) {
         this.uId = uId;
         this.strategyId = strategyId;
         this.drawState = drawState;
-        this.drawAwardInfo = drawAwardInfo;
+        this.drawAwardVO = drawAwardVO;
     }
 
     public String getuId() {
@@ -66,11 +66,11 @@ public class DrawResult {
         this.drawState = drawState;
     }
 
-    public DrawAwardInfo getDrawAwardInfo() {
-        return drawAwardInfo;
+    public DrawAwardVO getDrawAwardInfo() {
+        return drawAwardVO;
     }
 
-    public void setDrawAwardInfo(DrawAwardInfo drawAwardInfo) {
-        this.drawAwardInfo = drawAwardInfo;
+    public void setDrawAwardInfo(DrawAwardVO drawAwardVO) {
+        this.drawAwardVO = drawAwardVO;
     }
 }

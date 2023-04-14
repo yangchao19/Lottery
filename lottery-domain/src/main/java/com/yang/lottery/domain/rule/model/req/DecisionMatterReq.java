@@ -21,6 +21,15 @@ public class DecisionMatterReq {
     /** 决策值id*/
     private Map<String,Object> valMap;
 
+    public DecisionMatterReq() {
+    }
+
+    public DecisionMatterReq(Long treeId, String uId, Map<String, Object> valMap) {
+        this.treeId = treeId;
+        this.uId = uId;
+        this.valMap = valMap;
+    }
+
     public Long getTreeId() {
         return treeId;
     }

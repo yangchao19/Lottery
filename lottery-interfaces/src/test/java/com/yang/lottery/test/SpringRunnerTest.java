@@ -9,7 +9,7 @@ import com.yang.lottery.domain.award.service.factory.DistributionGoodsFactory;
 import com.yang.lottery.domain.award.service.goods.IDistributionGoods;
 import com.yang.lottery.domain.strategy.model.req.DrawReq;
 import com.yang.lottery.domain.strategy.model.res.DrawResult;
-import com.yang.lottery.domain.strategy.model.vo.DrawAwardInfo;
+import com.yang.lottery.domain.strategy.model.vo.DrawAwardVO;
 import com.yang.lottery.domain.strategy.service.draw.IDrawExec;
 import com.yang.lottery.infrastructure.dao.IActivityDao;
 import com.yang.lottery.infrastructure.po.Activity;
@@ -57,11 +57,11 @@ public class SpringRunnerTest {
         }
 
         // 封装发奖参数，orderId：2109313442431 为模拟ID，需要在用户参与领奖活动时生成
-        DrawAwardInfo drawAwardInfo = drawResult.getDrawAwardInfo();
-        GoodsReq goodsReq = new GoodsReq(drawResult.getuId(), "2109313442431", drawAwardInfo.getAwardId(), drawAwardInfo.getAwardName(), drawAwardInfo.getAwardContent());
+        DrawAwardVO drawAwardVO = drawResult.getDrawAwardInfo();
+        GoodsReq goodsReq = new GoodsReq(drawResult.getuId(), "2109313442431", drawAwardVO.getAwardId(), drawAwardVO.getAwardName(), drawAwardVO.getAwardContent());
 
         // 根据 awardType 从抽奖工厂中获取对应的发奖服务
-        IDistributionGoods distributionGoodsService = distributionGoodsFactory.getDistributionGoodsService(drawAwardInfo.getAwardType());
+        IDistributionGoods distributionGoodsService = distributionGoodsFactory.getDistributionGoodsService(drawAwardVO.getAwardType());
         DistributionRes distributionRes = distributionGoodsService.doDistribution(goodsReq);
 
         logger.info("测试结果：{}", JSON.toJSONString(distributionRes));
