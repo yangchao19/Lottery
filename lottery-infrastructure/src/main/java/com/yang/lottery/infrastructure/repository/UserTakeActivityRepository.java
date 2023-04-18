@@ -1,5 +1,6 @@
 package com.yang.lottery.infrastructure.repository;
 
+import com.alibaba.fastjson.JSON;
 import com.yang.lottery.common.Constants;
 import com.yang.lottery.domain.activity.model.vo.DrawOrderVO;
 import com.yang.lottery.domain.activity.model.vo.UserTakeActivityVO;
@@ -10,6 +11,8 @@ import com.yang.lottery.infrastructure.dao.IUserTakeActivityDao;
 import com.yang.lottery.infrastructure.po.UserStrategyExport;
 import com.yang.lottery.infrastructure.po.UserTakeActivity;
 import com.yang.lottery.infrastructure.po.UserTakeActivityCount;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Repository;
 
@@ -24,6 +27,9 @@ import java.util.Date;
  */
 @Repository
 public class UserTakeActivityRepository implements IUserTakeActivityRepository {
+
+    private Logger logger = LoggerFactory.getLogger(UserTakeActivityRepository.class);
+
     @Resource
     private IUserTakeActivityCountDao userTakeActivityCountDao;
 
@@ -118,11 +124,22 @@ public class UserTakeActivityRepository implements IUserTakeActivityRepository {
             return null;
         }
 
+        logger.info("有未发奖的发奖记录，{}", JSON.toJSONString(userTakeActivity));
+
         UserTakeActivityVO userTakeActivityVO = new UserTakeActivityVO();
         userTakeActivityVO.setActivityId(noConsumedTakeActivityOrder.getActivityId());
         userTakeActivityVO.setTakeId(noConsumedTakeActivityOrder.getTakeId());
         userTakeActivityVO.setStrategyId(noConsumedTakeActivityOrder.getStrategyId());
         userTakeActivityVO.setState(noConsumedTakeActivityOrder.getState());
         return userTakeActivityVO;
+    }
+
+    @Override
+    public void updateInvoiceMqState(String uId, Long orderId, Integer mqState) {
+        UserStrategyExport userStrategyExport = new UserStrategyExport();
+        userStrategyExport.setuId(uId);
+        userStrategyExport.setOrderId(orderId);
+        userStrategyExport.setMqState(mqState);
+        userStrategyExportDao.updateInvoiceMqState(userStrategyExport);
     }
 }

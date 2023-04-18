@@ -139,4 +139,9 @@ public class ActivityPartakeImpl extends BaseActivityPartake {
             dbRouter.clear();
         }
     }
+
+    @Override
+    public void updateInvoiceMaState(String uId, Long orderId, Integer mqState) {
+
+    }
 }

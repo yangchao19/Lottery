@@ -31,5 +31,12 @@ public interface IUserStrategyExportDao {
      */
     @DBRouter
     UserStrategyExport queryUserStrategyExportByUId(String uId);
+
+    /**
+     * 更新发送消息状态
+     * @param userStrategyExport 发送消息
+     */
+    @DBRouter
+    void updateInvoiceMqState(UserStrategyExport userStrategyExport);
 }
 

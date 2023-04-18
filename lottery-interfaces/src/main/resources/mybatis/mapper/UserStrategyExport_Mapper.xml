@@ -30,6 +30,11 @@
          #{grantType},#{grantDate},#{grantState},#{awardId},#{awardType},
          #{awardName},#{awardContent},#{uuid},now(),now())
     </insert>
+    <update id="updateInvoiceMqState" parameterType="com.yang.lottery.infrastructure.po.UserStrategyExport">
+        UPDATE user_strategy_export
+        SET mq_state = #{mqState}, update_time = now()
+        WHERE u_id = #{uId} AND order_id = #{orderId}
+    </update>
     <select id="queryUserStrategyExportByUId"
             resultType="com.yang.lottery.infrastructure.po.UserStrategyExport">
         SELECT id, u_id, activity_id, order_id, strategy_id, strategy_type,

@@ -26,4 +26,12 @@ public interface IActivityPartake {
      * @return          保存结果
      */
     Result recordDrawOrder(DrawOrderVO drawOrder);
+
+    /**
+     * 更新发货单MQ状态
+     * @param uId 用户id
+     * @param orderId 订单id
+     * @param mqState MQ 发送状态
+     */
+    void updateInvoiceMaState(String uId,Long orderId, Integer mqState);
 }

@@ -27,6 +27,8 @@ public class UserStrategyExport {
     private Date grantDate;
     /** 发奖状态 */
     private Integer grantState;
+    /** 发送消息状态*/
+    private Integer mqState;
     /** 发奖ID */
     private String awardId;
     /** 奖品类型（1:文字描述、2:兑换码、3:优惠券、4:实物奖品） */
@@ -168,5 +170,13 @@ public class UserStrategyExport {
 
     public void setUpdateTime(Date updateTime) {
         this.updateTime = updateTime;
+    }
+
+    public Integer getMqState() {
+        return mqState;
+    }
+
+    public void setMqState(Integer mqState) {
+        this.mqState = mqState;
     }
 }
