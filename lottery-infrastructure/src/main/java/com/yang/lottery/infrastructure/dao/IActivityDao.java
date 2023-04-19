@@ -1,8 +1,11 @@
 package com.yang.lottery.infrastructure.dao;
 
+import com.yang.lottery.domain.activity.model.vo.ActivityVO;
 import com.yang.lottery.domain.activity.model.vo.AlterStateVO;
 import com.yang.lottery.infrastructure.po.Activity;
 import org.apache.ibatis.annotations.Mapper;
+
+import java.util.List;
 
 /**
  * Date:2023/3/26
@@ -41,5 +44,13 @@ public interface IActivityDao {
      * @return 更新数量
      */
     int subtractionActivityStock(Long activityId);
+
+
+    /**
+     * 查询正在活动或已通过的活动
+     * @param id
+     * @return
+     */
+    List<Activity> scanToDoActivityList(Long id);
 
 }
