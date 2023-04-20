@@ -5,6 +5,8 @@ import com.yang.db.router.annotation.DBRouterStrategy;
 import com.yang.lottery.infrastructure.po.UserStrategyExport;
 import org.apache.ibatis.annotations.Mapper;
 
+import java.util.List;
+
 
 /**
  * @description:
@@ -33,10 +35,23 @@ public interface IUserStrategyExportDao {
     UserStrategyExport queryUserStrategyExportByUId(String uId);
 
     /**
+     * 更新发奖状态
+     * @param userStrategyExport 发奖信息
+     */
+    @DBRouter
+    void updateUserAwardState(UserStrategyExport userStrategyExport);
+
+    /**
      * 更新发送消息状态
      * @param userStrategyExport 发送消息
      */
     @DBRouter
     void updateInvoiceMqState(UserStrategyExport userStrategyExport);
+
+    /**
+     * 扫描发货单 MQ状态 ，把未发送MQ的单子扫描出来，做补偿
+     * @return 发货单
+     */
+    List<UserStrategyExport> scanInvoiceMqState();
 }
 

@@ -3,6 +3,7 @@ package com.yang.lottery.infrastructure.repository;
 import com.alibaba.fastjson.JSON;
 import com.yang.lottery.common.Constants;
 import com.yang.lottery.domain.activity.model.vo.DrawOrderVO;
+import com.yang.lottery.domain.activity.model.vo.InvoiceVO;
 import com.yang.lottery.domain.activity.model.vo.UserTakeActivityVO;
 import com.yang.lottery.domain.activity.repository.IUserTakeActivityRepository;
 import com.yang.lottery.infrastructure.dao.IUserStrategyExportDao;
@@ -17,7 +18,9 @@ import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Repository;
 
 import javax.annotation.Resource;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 /**
  * @description: 用户参与活动仓储
@@ -141,5 +144,22 @@ public class UserTakeActivityRepository implements IUserTakeActivityRepository {
         userStrategyExport.setOrderId(orderId);
         userStrategyExport.setMqState(mqState);
         userStrategyExportDao.updateInvoiceMqState(userStrategyExport);
+    }
+
+    @Override
+    public List<InvoiceVO> scanInvoiceMqState() {
+        List<UserStrategyExport> userStrategyExportList = userStrategyExportDao.scanInvoiceMqState();
+        ArrayList<InvoiceVO> invoiceVOList = new ArrayList<>();
+        for (UserStrategyExport userStrategyExport : userStrategyExportList) {
+            InvoiceVO invoiceVO = new InvoiceVO();
+            invoiceVO.setuId(userStrategyExport.getuId());
+            invoiceVO.setAwardId(userStrategyExport.getAwardId());
+            invoiceVO.setAwardName(userStrategyExport.getAwardName());
+            invoiceVO.setOrderId(userStrategyExport.getOrderId());
+            invoiceVO.setAwardType(userStrategyExport.getAwardType());
+            invoiceVO.setAwardContent(userStrategyExport.getAwardContent());
+            invoiceVOList.add(invoiceVO);
+        }
+        return invoiceVOList;
     }
 }

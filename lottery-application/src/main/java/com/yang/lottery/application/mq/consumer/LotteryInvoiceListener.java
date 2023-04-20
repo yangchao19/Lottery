@@ -33,6 +33,7 @@ public class LotteryInvoiceListener {
     @Resource
     private DistributionGoodsFactory distributionGoodsFactory;
 
+
     @KafkaListener(topics = "lottery_invoice", groupId = "lottery")
     public void onMessage(ConsumerRecord<?,?> record, Acknowledgment ack, @Header(KafkaHeaders.RECEIVED_TOPIC) String topic) {
         Optional<?> message = Optional.ofNullable(record.value());

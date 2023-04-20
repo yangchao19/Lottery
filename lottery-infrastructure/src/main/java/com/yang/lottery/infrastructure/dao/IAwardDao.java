@@ -26,4 +26,6 @@ public interface IAwardDao {
      * @param list 奖品配置
      */
     void insertList(List<Award> list);
+
+
 }
