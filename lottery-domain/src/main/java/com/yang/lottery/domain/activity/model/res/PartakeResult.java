@@ -13,6 +13,10 @@ public class PartakeResult extends Result {
 
     private Long takeId;
 
+    private Integer stockCount;
+
+    private Integer stockSurplusCount;
+
     public PartakeResult(String code, String info) {
         super(code, info);
     }
@@ -31,5 +35,21 @@ public class PartakeResult extends Result {
 
     public void setTakeId(Long takeId) {
         this.takeId = takeId;
+    }
+
+    public Integer getStockCount() {
+        return stockCount;
+    }
+
+    public void setStockCount(Integer stockCount) {
+        this.stockCount = stockCount;
+    }
+
+    public Integer getStockSurplusCount() {
+        return stockSurplusCount;
+    }
+
+    public void setStockSurplusCount(Integer stockSurplusCount) {
+        this.stockSurplusCount = stockSurplusCount;
     }
 }

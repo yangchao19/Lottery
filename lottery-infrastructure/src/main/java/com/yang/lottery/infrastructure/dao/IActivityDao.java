@@ -53,4 +53,10 @@ public interface IActivityDao {
      */
     List<Activity> scanToDoActivityList(Long id);
 
+    /**
+     * 更新用户领取活动后，库存
+     * @param activity 入参
+     */
+    void updateActivityStock(Activity activity);
+
 }

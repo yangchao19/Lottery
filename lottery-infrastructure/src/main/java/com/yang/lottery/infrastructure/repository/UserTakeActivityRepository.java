@@ -2,13 +2,16 @@ package com.yang.lottery.infrastructure.repository;
 
 import com.alibaba.fastjson.JSON;
 import com.yang.lottery.common.Constants;
+import com.yang.lottery.domain.activity.model.vo.ActivityPartakeRecordVO;
 import com.yang.lottery.domain.activity.model.vo.DrawOrderVO;
 import com.yang.lottery.domain.activity.model.vo.InvoiceVO;
 import com.yang.lottery.domain.activity.model.vo.UserTakeActivityVO;
 import com.yang.lottery.domain.activity.repository.IUserTakeActivityRepository;
+import com.yang.lottery.infrastructure.dao.IActivityDao;
 import com.yang.lottery.infrastructure.dao.IUserStrategyExportDao;
 import com.yang.lottery.infrastructure.dao.IUserTakeActivityCountDao;
 import com.yang.lottery.infrastructure.dao.IUserTakeActivityDao;
+import com.yang.lottery.infrastructure.po.Activity;
 import com.yang.lottery.infrastructure.po.UserStrategyExport;
 import com.yang.lottery.infrastructure.po.UserTakeActivity;
 import com.yang.lottery.infrastructure.po.UserTakeActivityCount;
@@ -41,6 +44,9 @@ public class UserTakeActivityRepository implements IUserTakeActivityRepository {
 
     @Resource
     private IUserStrategyExportDao userStrategyExportDao;
+
+    @Resource
+    private IActivityDao activityDao;
 
     @Override
     public int subtractionLeftCount(Long activityId, String activityName, Integer takeCount, Integer userTakeLeftCount, String uId, Date partakeDate) {
@@ -161,5 +167,13 @@ public class UserTakeActivityRepository implements IUserTakeActivityRepository {
             invoiceVOList.add(invoiceVO);
         }
         return invoiceVOList;
+    }
+
+    @Override
+    public void updateActivityStock(ActivityPartakeRecordVO activityPartakeRecordVO) {
+        Activity activity = new Activity();
+        activity.setActivityId(activityPartakeRecordVO.getActivityId());
+        activity.setStockSurplusCount(activityPartakeRecordVO.getStockSurplusCount());
+        activityDao.updateActivityStock(activity);
     }
 }

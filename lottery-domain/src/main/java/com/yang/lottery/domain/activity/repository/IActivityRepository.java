@@ -2,6 +2,7 @@ package com.yang.lottery.domain.activity.repository;
 
 import com.yang.lottery.common.Constants;
 import com.yang.lottery.domain.activity.model.req.PartakeReq;
+import com.yang.lottery.domain.activity.model.res.StockResult;
 import com.yang.lottery.domain.activity.model.vo.*;
 
 import java.util.List;
@@ -67,4 +68,21 @@ public interface IActivityRepository {
      * @return 待处理的活动列表
      */
     List<ActivityVO> scanToDoActivityList(Long id);
+
+    /**
+     *  扣减活动库存，通过Redis
+     * @param uId 用户id
+     * @param activityId 活动id
+     * @param stockCount 总库存
+     * @return 扣减结果
+     */
+    StockResult subtractionActivityStockByRedis(String uId, Long activityId, Integer stockCount);
+
+    /**
+     * 恢复活动库存，通过Redis 【如果非常异常，则需要进行缓存库存恢复，只保证不超卖的特性，所以不保证一定能恢复占用库存，另外最终可以由任务进行补偿库存】
+     * @param activityId
+     * @param tokenKey
+     * @param code
+     */
+    void recoverActivityCacheStockByRedis(Long activityId, String tokenKey, String code);
 }

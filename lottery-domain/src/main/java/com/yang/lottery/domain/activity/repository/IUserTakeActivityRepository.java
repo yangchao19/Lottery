@@ -1,5 +1,6 @@
 package com.yang.lottery.domain.activity.repository;
 
+import com.yang.lottery.domain.activity.model.vo.ActivityPartakeRecordVO;
 import com.yang.lottery.domain.activity.model.vo.DrawOrderVO;
 import com.yang.lottery.domain.activity.model.vo.InvoiceVO;
 import com.yang.lottery.domain.activity.model.vo.UserTakeActivityVO;
@@ -78,4 +79,11 @@ public interface IUserTakeActivityRepository {
      * @return 发货单
      */
     List<InvoiceVO> scanInvoiceMqState();
+
+
+    /**
+     * 更新活动库存
+     * @param activityPartakeRecordVO 活动领取记录
+     */
+    void updateActivityStock(ActivityPartakeRecordVO activityPartakeRecordVO);
 }

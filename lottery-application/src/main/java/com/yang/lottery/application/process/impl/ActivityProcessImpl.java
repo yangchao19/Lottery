@@ -9,6 +9,7 @@ import com.yang.lottery.common.Constants;
 import com.yang.lottery.common.Result;
 import com.yang.lottery.domain.activity.model.req.PartakeReq;
 import com.yang.lottery.domain.activity.model.res.PartakeResult;
+import com.yang.lottery.domain.activity.model.vo.ActivityPartakeRecordVO;
 import com.yang.lottery.domain.activity.model.vo.DrawOrderVO;
 import com.yang.lottery.domain.activity.model.vo.InvoiceVO;
 import com.yang.lottery.domain.activity.service.partake.IActivityPartake;
@@ -57,9 +58,21 @@ public class ActivityProcessImpl implements IActivityProcess {
     public DrawProcessResult doDrawProcess(DrawProcessReq req) {
         //1 领取活动
         PartakeResult partakeResult = activityPartake.doPartake(new PartakeReq(req.getuId(), req.getActivityId()));
-        if (!Constants.ResponseCode.SUCCESS.getCode().equals(partakeResult.getCode())) {
+        if (!Constants.ResponseCode.SUCCESS.getCode().equals(partakeResult.getCode()) && !Constants.ResponseCode.NOT_CONSUMED_TAKE.getCode().equals(partakeResult.getCode())) {
             return new DrawProcessResult(partakeResult.getCode(), partakeResult.getInfo());
         }
+
+        //2 首次成功领取活动，发送 MQ 消息
+        if (Constants.ResponseCode.SUCCESS.getCode().equals(partakeResult.getCode())) {
+            ActivityPartakeRecordVO activityPartakeRecordVO = new ActivityPartakeRecordVO();
+            activityPartakeRecordVO.setActivityId(req.getActivityId());
+            activityPartakeRecordVO.setuId(req.getuId());
+            activityPartakeRecordVO.setStockCount(partakeResult.getStockCount());
+            activityPartakeRecordVO.setStockSurplusCount(partakeResult.getStockSurplusCount());
+
+            // 发送 MQ 消息
+        }
+
         Long strategyId = partakeResult.getStrategyId();
         Long takeId = partakeResult.getTakeId();
 
