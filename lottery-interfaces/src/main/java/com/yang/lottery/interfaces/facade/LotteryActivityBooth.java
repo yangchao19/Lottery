@@ -8,14 +8,14 @@ import com.yang.lottery.common.Constants;
 import com.yang.lottery.domain.rule.model.req.DecisionMatterReq;
 import com.yang.lottery.domain.strategy.model.vo.DrawAwardVO;
 import com.yang.lottery.interfaces.assember.IMapping;
-import com.yang.lottery.rpc.ILotteryActivityBooth;
-import com.yang.lottery.rpc.dto.AwardDTO;
-import com.yang.lottery.rpc.req.DrawReq;
-import com.yang.lottery.rpc.req.QuantificationDrawReq;
-import com.yang.lottery.rpc.res.DrawRes;
+import com.yang.lottery.rpc.activity.booth.ILotteryActivityBooth;
+import com.yang.lottery.rpc.activity.booth.dto.AwardDTO;
+import com.yang.lottery.rpc.activity.booth.req.DrawReq;
+import com.yang.lottery.rpc.activity.booth.req.QuantificationDrawReq;
+import com.yang.lottery.rpc.activity.booth.res.DrawRes;
+import org.apache.dubbo.config.annotation.Service;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.stereotype.Controller;
 
 import javax.annotation.Resource;
 
@@ -25,7 +25,7 @@ import javax.annotation.Resource;
  * @date: 2023/4/13
  * @Copyright：
  */
-@Controller
+@Service
 public class LotteryActivityBooth implements ILotteryActivityBooth {
 
     private Logger logger = LoggerFactory.getLogger(LotteryActivityBooth.class);

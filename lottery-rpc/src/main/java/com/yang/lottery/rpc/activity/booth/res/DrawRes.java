@@ -1,7 +1,7 @@
-package com.yang.lottery.rpc.res;
+package com.yang.lottery.rpc.activity.booth.res;
 
 import com.yang.lottery.common.Result;
-import com.yang.lottery.rpc.dto.AwardDTO;
+import com.yang.lottery.rpc.activity.booth.dto.AwardDTO;
 
 import java.io.Serializable;
 

@@ -1,8 +1,8 @@
-package com.yang.lottery.rpc;
+package com.yang.lottery.rpc.activity.booth;
 
-import com.yang.lottery.rpc.req.DrawReq;
-import com.yang.lottery.rpc.req.QuantificationDrawReq;
-import com.yang.lottery.rpc.res.DrawRes;
+import com.yang.lottery.rpc.activity.booth.req.DrawReq;
+import com.yang.lottery.rpc.activity.booth.req.QuantificationDrawReq;
+import com.yang.lottery.rpc.activity.booth.res.DrawRes;
 
 /**
  * @description: 抽奖活动展台接口

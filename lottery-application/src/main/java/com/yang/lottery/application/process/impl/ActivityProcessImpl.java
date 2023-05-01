@@ -47,7 +47,7 @@ public class ActivityProcessImpl implements IActivityProcess {
     @Resource
     private Map<Constants.Ids, IIdGenerator> idGeneratorMap;
 
-    @Resource
+    @Resource(name = "ruleEngineHandle")
     private EngineFilter engineFilter;
 
     @Resource

@@ -21,9 +21,9 @@ public class IdContext {
     /**
      * 创建 ID 生成策略对象，属于策略设计模式的使用方式
      *
-     * @param snowFlake 雪花算法，长码，大量
-     * @param shortCode 日期算法，短码，少量，全局唯一需要自己保证
-     * @param randomNumeric 随机算法，短码，大量，全局唯一需要自己保证
+     * @param snowFlake 雪花算法，长码，大量 用于生产单号
+     * @param shortCode 日期算法，短码，少量，全局唯一需要自己保证，用于生成活动编号
+     * @param randomNumeric 随机算法，短码，大量，全局唯一需要自己保证，用于生成策略ID
      * @return IIdGenerator 实现类
      */
     @Bean

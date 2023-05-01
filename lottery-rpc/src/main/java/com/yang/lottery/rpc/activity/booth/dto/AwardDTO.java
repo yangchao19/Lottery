@@ -1,4 +1,4 @@
-package com.yang.lottery.rpc.dto;
+package com.yang.lottery.rpc.activity.booth.dto;
 
 import java.io.Serializable;
 import java.util.Date;

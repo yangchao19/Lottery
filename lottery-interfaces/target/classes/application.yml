@@ -31,6 +31,10 @@ mybatis:
   mapper-locations: classpath:/mybatis/mapper/*.xml
   config-location: classpath:/mybatis/config/mybatis-config.xml
 
+# nacos 配置中心
+nacos:
+  discovery:
+    server-addr: 124.222.253.96:8848
 
 # Dubbo 广播方式配置
 dubbo:
@@ -38,16 +42,18 @@ dubbo:
     name: Lottery
     version: 1.0.0
   registry:
-    address: multicast://224.5.6.7:1234
+    address: nacos://124.222.253.96:8848
   protocol:
     name: dubbo
     port: 20880
   scan:
-    base-packages: com.yang.lottery.rpc
+    base-packages: com.yang.lottery.rpc.*
+
+
 
 spring:
   kafka:
-    bootstrap-servers: localhost:9092
+    bootstrap-servers: 124.222.253.96:9092
     producer:
       # 发生错误后，消息重发的次数
       retries: 1
@@ -89,9 +95,9 @@ spring:
   # redis.conf protected-mode yes 改为 protected-mode no
   redis:
     database: 0
-    host: 43.143.31.48
+    host: 124.222.253.96
     port: 6379
-    password: 1234
+    password:
     timeout: 3000
 
 # xxl-job
@@ -102,12 +108,12 @@ spring:
 xxl:
   job:
     admin:
-      addresses: http://127.0.0.1:7397/xxl-job-admin
+      addresses: http://124.222.253.96:7397/xxl-job-admin
     executor:
       address:
       appname: lottery-job
-      ip:
+      ip: hyd8xj.natappfree.cc
       port: 9998
       logpath: E:\java\project\xxl-job-2.3.0\jobhandler
       logretentiondays: 50
-    accessToken:
+    accessToken: b1e597c6ea5c0bae

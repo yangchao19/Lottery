@@ -1,10 +1,11 @@
 package com.yang.lottery.test.interfaces;
 
 import com.alibaba.fastjson.JSON;
-import com.yang.lottery.rpc.ILotteryActivityBooth;
-import com.yang.lottery.rpc.req.DrawReq;
-import com.yang.lottery.rpc.req.QuantificationDrawReq;
-import com.yang.lottery.rpc.res.DrawRes;
+
+import com.yang.lottery.rpc.activity.booth.ILotteryActivityBooth;
+import com.yang.lottery.rpc.activity.booth.req.DrawReq;
+import com.yang.lottery.rpc.activity.booth.req.QuantificationDrawReq;
+import com.yang.lottery.rpc.activity.booth.res.DrawRes;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.slf4j.Logger;

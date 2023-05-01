@@ -1,4 +1,4 @@
-package com.yang.lottery.rpc.req;
+package com.yang.lottery.rpc.activity.booth.req;
 
 import java.io.Serializable;
 

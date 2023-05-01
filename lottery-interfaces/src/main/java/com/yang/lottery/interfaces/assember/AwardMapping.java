@@ -1,7 +1,7 @@
 package com.yang.lottery.interfaces.assember;
 
 import com.yang.lottery.domain.strategy.model.vo.DrawAwardVO;
-import com.yang.lottery.rpc.dto.AwardDTO;
+import com.yang.lottery.rpc.activity.booth.dto.AwardDTO;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 import org.mapstruct.ReportingPolicy;
