@@ -71,6 +71,7 @@ public class ActivityProcessImpl implements IActivityProcess {
             activityPartakeRecordVO.setStockSurplusCount(partakeResult.getStockSurplusCount());
 
             // 发送 MQ 消息
+            kafkaProducer.sendLotteryActivityPartakeRecord(activityPartakeRecordVO);
         }
 
         Long strategyId = partakeResult.getStrategyId();
