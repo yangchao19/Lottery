@@ -1,9 +1,9 @@
 package com.yang.lottery.interfaces.facade;
 
-import com.yang.lottery.application.process.IActivityProcess;
-import com.yang.lottery.application.process.req.DrawProcessReq;
-import com.yang.lottery.application.process.res.DrawProcessResult;
-import com.yang.lottery.application.process.res.RuleQuantificationCrowdResult;
+import com.yang.lottery.application.process.draw.IActivityProcess;
+import com.yang.lottery.application.process.draw.req.DrawProcessReq;
+import com.yang.lottery.application.process.draw.res.DrawProcessResult;
+import com.yang.lottery.application.process.draw.res.RuleQuantificationCrowdResult;
 import com.yang.lottery.common.Constants;
 import com.yang.lottery.domain.rule.model.req.DecisionMatterReq;
 import com.yang.lottery.domain.strategy.model.vo.DrawAwardVO;

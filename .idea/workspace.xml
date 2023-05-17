@@ -23,8 +23,91 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a68943e0-afb0-4e25-9364-505ee637b9aa" name="Default Changelist" comment="lotterywx">
+      <change afterPath="$PROJECT_DIR$/lottery-application/src/main/java/com/yang/lottery/application/process/deploy/IActivityDeployProcess.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lottery-application/src/main/java/com/yang/lottery/application/process/deploy/impl/ActivityDeployProcessImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lottery-common/src/main/java/com/yang/lottery/common/PageRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lottery-domain/src/main/java/com/yang/lottery/domain/activity/model/aggregates/ActivityInfoLimitPageRich.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lottery-domain/src/main/java/com/yang/lottery/domain/activity/model/req/ActivityInfoLimitPageReq.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lottery-interfaces/src/main/java/com/yang/lottery/interfaces/assember/ActivityMapping.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lottery-rpc/src/main/java/com/yang/lottery/rpc/activity/deploy/ILotteryActivityDeploy.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lottery-rpc/src/main/java/com/yang/lottery/rpc/activity/deploy/dto/ActivityDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lottery-rpc/src/main/java/com/yang/lottery/rpc/activity/deploy/req/ActivityPageReq.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lottery-rpc/src/main/java/com/yang/lottery/rpc/activity/deploy/res/ActivityRes.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lottery-interfaces/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/lottery-interfaces/target/classes/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lottery-application/src/main/java/com/yang/lottery/application/process/IActivityProcess.java" beforeDir="false" afterPath="$PROJECT_DIR$/lottery-application/src/main/java/com/yang/lottery/application/process/draw/IActivityProcess.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lottery-application/src/main/java/com/yang/lottery/application/process/impl/ActivityProcessImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/lottery-application/src/main/java/com/yang/lottery/application/process/draw/impl/ActivityProcessImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lottery-application/src/main/java/com/yang/lottery/application/process/req/DrawProcessReq.java" beforeDir="false" afterPath="$PROJECT_DIR$/lottery-application/src/main/java/com/yang/lottery/application/process/draw/req/DrawProcessReq.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lottery-application/src/main/java/com/yang/lottery/application/process/res/DrawProcessResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/lottery-application/src/main/java/com/yang/lottery/application/process/draw/res/DrawProcessResult.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lottery-application/src/main/java/com/yang/lottery/application/process/res/RuleQuantificationCrowdResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/lottery-application/src/main/java/com/yang/lottery/application/process/draw/res/RuleQuantificationCrowdResult.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lottery-common/src/main/java/META-INF/MANIFEST.MF" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lottery-common/src/main/java/com/yang/lottery/common/Result.java" beforeDir="false" afterPath="$PROJECT_DIR$/lottery-common/src/main/java/com/yang/lottery/common/Result.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lottery-common/target/classes/com/yang/lottery/common/Constants$AwardState.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lottery-common/target/classes/com/yang/lottery/common/Constants$AwardType.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lottery-common/target/classes/com/yang/lottery/common/Constants$DrawState.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lottery-common/target/classes/com/yang/lottery/common/Constants$ResponseCode.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lottery-common/target/classes/com/yang/lottery/common/Constants$StrategyMode.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lottery-common/target/classes/com/yang/lottery/common/Constants.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lottery-common/target/classes/com/yang/lottery/common/Result.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lottery-domain/src/main/java/com/yang/lottery/domain/activity/model/vo/ActivityVO.java" beforeDir="false" afterPath="$PROJECT_DIR$/lottery-domain/src/main/java/com/yang/lottery/domain/activity/model/vo/ActivityVO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lottery-domain/src/main/java/com/yang/lottery/domain/activity/repository/IActivityRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/lottery-domain/src/main/java/com/yang/lottery/domain/activity/repository/IActivityRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lottery-domain/src/main/java/com/yang/lottery/domain/activity/service/deploy/IActivityDeploy.java" beforeDir="false" afterPath="$PROJECT_DIR$/lottery-domain/src/main/java/com/yang/lottery/domain/activity/service/deploy/IActivityDeploy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lottery-domain/src/main/java/com/yang/lottery/domain/activity/service/deploy/impl/ActivityDeployImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/lottery-domain/src/main/java/com/yang/lottery/domain/activity/service/deploy/impl/ActivityDeployImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lottery-domain/target/classes/com/yang/lottery/domain/award/model/req/GoodsReq.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lottery-domain/target/classes/com/yang/lottery/domain/award/model/res/DistributionRes.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lottery-domain/target/classes/com/yang/lottery/domain/award/model/vo/ShippingAddress.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lottery-domain/target/classes/com/yang/lottery/domain/award/repository/IAwardRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lottery-domain/target/classes/com/yang/lottery/domain/award/service/factory/DistributionGoodsFactory.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lottery-domain/target/classes/com/yang/lottery/domain/award/service/factory/GoodsConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lottery-domain/target/classes/com/yang/lottery/domain/award/service/goods/DistributionBase.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lottery-domain/target/classes/com/yang/lottery/domain/award/service/goods/IDistributionGoods.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lottery-domain/target/classes/com/yang/lottery/domain/award/service/goods/impl/CouponGoods.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lottery-domain/target/classes/com/yang/lottery/domain/award/service/goods/impl/DescGoods.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lottery-domain/target/classes/com/yang/lottery/domain/award/service/goods/impl/PhysicalGoods.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lottery-domain/target/classes/com/yang/lottery/domain/award/service/goods/impl/RedeemCodeGoods.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lottery-domain/target/classes/com/yang/lottery/domain/strategy/model/aggregates/StrategyRich.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lottery-domain/target/classes/com/yang/lottery/domain/strategy/model/req/DrawReq.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lottery-domain/target/classes/com/yang/lottery/domain/strategy/model/res/DrawResult.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lottery-domain/target/classes/com/yang/lottery/domain/strategy/repository/IStrategyRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lottery-domain/target/classes/com/yang/lottery/domain/strategy/service/algorithm/BaseAlgorithm.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lottery-domain/target/classes/com/yang/lottery/domain/strategy/service/algorithm/IDrawAlgorithm.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lottery-domain/target/classes/com/yang/lottery/domain/strategy/service/algorithm/impl/EntiretyRateRandomDrawAlgorithm.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lottery-domain/target/classes/com/yang/lottery/domain/strategy/service/algorithm/impl/SingleRateRandomDrawAlgorithm.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lottery-domain/target/classes/com/yang/lottery/domain/strategy/service/draw/AbstractDrawBase.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lottery-domain/target/classes/com/yang/lottery/domain/strategy/service/draw/DrawConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lottery-domain/target/classes/com/yang/lottery/domain/strategy/service/draw/DrawStrategySupport.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lottery-domain/target/classes/com/yang/lottery/domain/strategy/service/draw/IDrawExec.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lottery-domain/target/classes/com/yang/lottery/domain/strategy/service/draw/impl/DrawExecImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lottery-infrastructure/src/main/java/com/yang/lottery/infrastructure/dao/IActivityDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/lottery-infrastructure/src/main/java/com/yang/lottery/infrastructure/dao/IActivityDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lottery-infrastructure/src/main/java/com/yang/lottery/infrastructure/repository/ActivityRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/lottery-infrastructure/src/main/java/com/yang/lottery/infrastructure/repository/ActivityRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lottery-infrastructure/target/classes/com/yang/lottery/infrastructure/dao/IActivityDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lottery-infrastructure/target/classes/com/yang/lottery/infrastructure/dao/IAwardDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lottery-infrastructure/target/classes/com/yang/lottery/infrastructure/dao/IStrategyDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lottery-infrastructure/target/classes/com/yang/lottery/infrastructure/dao/IStrategyDetailDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lottery-infrastructure/target/classes/com/yang/lottery/infrastructure/po/Activity.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lottery-infrastructure/target/classes/com/yang/lottery/infrastructure/po/Award.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lottery-infrastructure/target/classes/com/yang/lottery/infrastructure/po/Strategy.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lottery-infrastructure/target/classes/com/yang/lottery/infrastructure/po/StrategyDetail.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lottery-interfaces/src/main/java/com/yang/lottery/interfaces/assember/IMapping.java" beforeDir="false" afterPath="$PROJECT_DIR$/lottery-interfaces/src/main/java/com/yang/lottery/interfaces/assember/IMapping.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lottery-interfaces/src/main/java/com/yang/lottery/interfaces/facade/LotteryActivityBooth.java" beforeDir="false" afterPath="$PROJECT_DIR$/lottery-interfaces/src/main/java/com/yang/lottery/interfaces/facade/LotteryActivityBooth.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lottery-interfaces/src/main/java/com/yang/lottery/interfaces/facade/LotteryActivityDeploy.java" beforeDir="false" afterPath="$PROJECT_DIR$/lottery-interfaces/src/main/java/com/yang/lottery/interfaces/facade/LotteryActivityDeploy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lottery-interfaces/src/main/resources/mybatis/mapper/Activity_Mapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/lottery-interfaces/src/main/resources/mybatis/mapper/Activity_Mapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lottery-interfaces/src/test/java/com/yang/lottery/test/application/ActivityProcessTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/lottery-interfaces/src/test/java/com/yang/lottery/test/application/ActivityProcessTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lottery-interfaces/target/classes/application.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lottery-interfaces/target/classes/com/yang/lottery/LotteryApplication.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lottery-interfaces/target/classes/mybatis/config/mybatis-config.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lottery-interfaces/target/classes/mybatis/mapper/Activity_Mapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lottery-interfaces/target/classes/mybatis/mapper/Award_Mapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lottery-interfaces/target/classes/mybatis/mapper/StrategyDetail_Mapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lottery-interfaces/target/classes/mybatis/mapper/Strategy_Mapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lottery-interfaces/target/test-classes/com/yang/lottery/test/Apitest1$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lottery-interfaces/target/test-classes/com/yang/lottery/test/Apitest1$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lottery-interfaces/target/test-classes/com/yang/lottery/test/Apitest1$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lottery-interfaces/target/test-classes/com/yang/lottery/test/Apitest1$4.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lottery-interfaces/target/test-classes/com/yang/lottery/test/Apitest1$5.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lottery-interfaces/target/test-classes/com/yang/lottery/test/Apitest1$6.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lottery-interfaces/target/test-classes/com/yang/lottery/test/Apitest1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lottery-interfaces/target/test-classes/com/yang/lottery/test/DrawStrategy.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lottery-interfaces/target/test-classes/com/yang/lottery/test/SpringRunnerTest.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,15 +117,15 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="lottery18" />
+        <entry key="$PROJECT_DIR$" value="lottery-wx" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -86,7 +169,7 @@
     <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="database.data.extractors.current.export.id" value="Comma-separated (CSV)_id" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/lottery-rpc/src" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/lottery-application/src/main/java/com/yang/lottery/application/process/draw" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -105,8 +188,12 @@
     <option name="notificationShown" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="E:\java\project\Lottery\lottery-interfaces\src\main\resources" />
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\java\project\Lottery\lottery-application\src\main\java\com\yang\lottery\application\process\draw" />
+      <recent name="E:\java\project\Lottery\lottery-rpc\src\main\java\com\yang\lottery\rpc\activity\booth" />
+      <recent name="E:\java\project\Lottery\lottery-rpc\src\main\java\com\yang\lottery\rpc\activity" />
+      <recent name="E:\java\project\Lottery\lottery-application\src\main\java\com\yang\lottery\application\worker" />
+      <recent name="E:\java\project\Lottery\lottery-interfaces\src\main\resources\mybatis\mapper" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.yang.lottery.domain.support.redis" />
@@ -114,11 +201,8 @@
       <recent name="com.yang.lottery.test.dao" />
       <recent name="com.yang.lottery.test" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="E:\java\project\Lottery\lottery-rpc\src\main\java\com\yang\lottery\rpc\activity\booth" />
-      <recent name="E:\java\project\Lottery\lottery-rpc\src\main\java\com\yang\lottery\rpc\activity" />
-      <recent name="E:\java\project\Lottery\lottery-application\src\main\java\com\yang\lottery\application\worker" />
-      <recent name="E:\java\project\Lottery\lottery-interfaces\src\main\resources\mybatis\mapper" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\java\project\Lottery\lottery-interfaces\src\main\resources" />
     </key>
   </component>
   <component name="RunManager" selected="Spring Boot.LotteryApplication">
@@ -267,7 +351,7 @@
       <workItem from="1683112329045" duration="6846000" />
       <workItem from="1683182992218" duration="8708000" />
       <workItem from="1683378124914" duration="4646000" />
-      <workItem from="1684107554473" duration="7778000" />
+      <workItem from="1684107554473" duration="28102000" />
     </task>
     <task id="LOCAL-00001" summary="lottery07">
       <created>1680339418327</created>
@@ -367,7 +451,14 @@
       <option name="project" value="LOCAL" />
       <updated>1684152084488</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="lotterywx">
+      <created>1684205469771</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1684205469771</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -421,10 +512,10 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="552" y="189" key="#com.intellij.execution.impl.EditConfigurationsDialog/1920.0.1536.864/0.0.1920.1080/-1920.0.1920.1080@0.0.1920.1080" timestamp="1682581619267" />
-    <state x="740" y="291" key="#com.intellij.ide.util.MemberChooser" timestamp="1682057649618">
+    <state x="740" y="291" key="#com.intellij.ide.util.MemberChooser" timestamp="1684327311639">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="740" y="291" key="#com.intellij.ide.util.MemberChooser/1920.0.1536.864/0.0.1920.1080/-1920.0.1920.1080@0.0.1920.1080" timestamp="1682057649618" />
+    <state x="740" y="291" key="#com.intellij.ide.util.MemberChooser/1920.0.1536.864/0.0.1920.1080/-1920.0.1920.1080@0.0.1920.1080" timestamp="1684327311639" />
     <state x="-1345" y="288" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1683035061403">
       <screen x="-1920" y="0" width="1920" height="1080" />
     </state>
@@ -460,11 +551,11 @@
     <state x="-1185" y="195" key="FileChooserDialogImpl/1920.0.1536.864/0.0.1920.1080/-1920.0.1920.1080@-1920.0.1920.1080" timestamp="1682957249705" />
     <state x="689" y="224" key="FileChooserDialogImpl/1920.0.1536.864/0.0.1920.1080/-1920.0.1920.1080@0.0.1920.1080" timestamp="1682783981881" />
     <state x="720" y="179" key="FileChooserDialogImpl/1920.0.1536.864/0.0.1920.1080/-1920.0.1920.1080@1920.0.1536.864" timestamp="1679990034619" />
-    <state width="331" height="442" key="Git.Branch.Popup" timestamp="1684205386245">
+    <state width="339" height="450" key="Git.Branch.Popup" timestamp="1684205797690">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state width="283" height="394" key="Git.Branch.Popup/1920.0.1536.864/0.0.1920.1080/-1920.0.1920.1080@-1920.0.1920.1080" timestamp="1683037497695" />
-    <state width="331" height="442" key="Git.Branch.Popup/1920.0.1536.864/0.0.1920.1080/-1920.0.1920.1080@0.0.1920.1080" timestamp="1684205386245" />
+    <state width="339" height="450" key="Git.Branch.Popup/1920.0.1536.864/0.0.1920.1080/-1920.0.1920.1080@0.0.1920.1080" timestamp="1684205797690" />
     <state x="706" y="400" key="Github.CreateGistDialog" timestamp="1680162925238">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
@@ -477,68 +568,68 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="576" y="172" key="Github.UntrackedFilesDialog/1920.0.1536.864/0.0.1920.1080/-1920.0.1920.1080@0.0.1920.1080" timestamp="1680163784522" />
-    <state width="1867" height="643" key="GridCell.Tab.0.bottom" timestamp="1684199309643">
+    <state width="1867" height="643" key="GridCell.Tab.0.bottom" timestamp="1684323086603">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state width="1867" height="643" key="GridCell.Tab.0.bottom/1920.0.1536.864/0.0.1920.1080/-1920.0.1920.1080@-1920.0.1920.1080" timestamp="1683038742815" />
-    <state width="1867" height="643" key="GridCell.Tab.0.bottom/1920.0.1536.864/0.0.1920.1080/-1920.0.1920.1080@0.0.1920.1080" timestamp="1684199309643" />
+    <state width="1867" height="643" key="GridCell.Tab.0.bottom/1920.0.1536.864/0.0.1920.1080/-1920.0.1920.1080@0.0.1920.1080" timestamp="1684323086603" />
     <state width="1483" height="664" key="GridCell.Tab.0.bottom/1920.0.1536.864/0.0.1920.1080/-1920.0.1920.1080@1920.0.1536.864" timestamp="1680184384909" />
-    <state width="1867" height="643" key="GridCell.Tab.0.center" timestamp="1684199309643">
+    <state width="1867" height="643" key="GridCell.Tab.0.center" timestamp="1684323086603">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state width="1867" height="643" key="GridCell.Tab.0.center/1920.0.1536.864/0.0.1920.1080/-1920.0.1920.1080@-1920.0.1920.1080" timestamp="1683038742815" />
-    <state width="1867" height="643" key="GridCell.Tab.0.center/1920.0.1536.864/0.0.1920.1080/-1920.0.1920.1080@0.0.1920.1080" timestamp="1684199309643" />
+    <state width="1867" height="643" key="GridCell.Tab.0.center/1920.0.1536.864/0.0.1920.1080/-1920.0.1920.1080@0.0.1920.1080" timestamp="1684323086603" />
     <state width="1483" height="664" key="GridCell.Tab.0.center/1920.0.1536.864/0.0.1920.1080/-1920.0.1920.1080@1920.0.1536.864" timestamp="1680184384909" />
-    <state width="1867" height="643" key="GridCell.Tab.0.left" timestamp="1684199309642">
+    <state width="1867" height="643" key="GridCell.Tab.0.left" timestamp="1684323086602">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state width="1867" height="643" key="GridCell.Tab.0.left/1920.0.1536.864/0.0.1920.1080/-1920.0.1920.1080@-1920.0.1920.1080" timestamp="1683038742815" />
-    <state width="1867" height="643" key="GridCell.Tab.0.left/1920.0.1536.864/0.0.1920.1080/-1920.0.1920.1080@0.0.1920.1080" timestamp="1684199309642" />
+    <state width="1867" height="643" key="GridCell.Tab.0.left/1920.0.1536.864/0.0.1920.1080/-1920.0.1920.1080@0.0.1920.1080" timestamp="1684323086602" />
     <state width="1483" height="664" key="GridCell.Tab.0.left/1920.0.1536.864/0.0.1920.1080/-1920.0.1920.1080@1920.0.1536.864" timestamp="1680184384908" />
-    <state width="1867" height="643" key="GridCell.Tab.0.right" timestamp="1684199309643">
+    <state width="1867" height="643" key="GridCell.Tab.0.right" timestamp="1684323086603">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state width="1867" height="643" key="GridCell.Tab.0.right/1920.0.1536.864/0.0.1920.1080/-1920.0.1920.1080@-1920.0.1920.1080" timestamp="1683038742815" />
-    <state width="1867" height="643" key="GridCell.Tab.0.right/1920.0.1536.864/0.0.1920.1080/-1920.0.1920.1080@0.0.1920.1080" timestamp="1684199309643" />
+    <state width="1867" height="643" key="GridCell.Tab.0.right/1920.0.1536.864/0.0.1920.1080/-1920.0.1920.1080@0.0.1920.1080" timestamp="1684323086603" />
     <state width="1483" height="664" key="GridCell.Tab.0.right/1920.0.1536.864/0.0.1920.1080/-1920.0.1920.1080@1920.0.1536.864" timestamp="1680184384909" />
-    <state width="1867" height="643" key="GridCell.Tab.1.bottom" timestamp="1684199309643">
+    <state width="1867" height="643" key="GridCell.Tab.1.bottom" timestamp="1684323076921">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state width="1867" height="643" key="GridCell.Tab.1.bottom/1920.0.1536.864/0.0.1920.1080/-1920.0.1920.1080@-1920.0.1920.1080" timestamp="1683038742815" />
-    <state width="1867" height="643" key="GridCell.Tab.1.bottom/1920.0.1536.864/0.0.1920.1080/-1920.0.1920.1080@0.0.1920.1080" timestamp="1684199309643" />
-    <state width="1867" height="643" key="GridCell.Tab.1.center" timestamp="1684199309643">
+    <state width="1867" height="643" key="GridCell.Tab.1.bottom/1920.0.1536.864/0.0.1920.1080/-1920.0.1920.1080@0.0.1920.1080" timestamp="1684323076921" />
+    <state width="1867" height="643" key="GridCell.Tab.1.center" timestamp="1684323076921">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state width="1867" height="643" key="GridCell.Tab.1.center/1920.0.1536.864/0.0.1920.1080/-1920.0.1920.1080@-1920.0.1920.1080" timestamp="1683038742815" />
-    <state width="1867" height="643" key="GridCell.Tab.1.center/1920.0.1536.864/0.0.1920.1080/-1920.0.1920.1080@0.0.1920.1080" timestamp="1684199309643" />
-    <state width="1867" height="643" key="GridCell.Tab.1.left" timestamp="1684199309643">
+    <state width="1867" height="643" key="GridCell.Tab.1.center/1920.0.1536.864/0.0.1920.1080/-1920.0.1920.1080@0.0.1920.1080" timestamp="1684323076921" />
+    <state width="1867" height="643" key="GridCell.Tab.1.left" timestamp="1684323076921">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state width="1867" height="643" key="GridCell.Tab.1.left/1920.0.1536.864/0.0.1920.1080/-1920.0.1920.1080@-1920.0.1920.1080" timestamp="1683038742815" />
-    <state width="1867" height="643" key="GridCell.Tab.1.left/1920.0.1536.864/0.0.1920.1080/-1920.0.1920.1080@0.0.1920.1080" timestamp="1684199309643" />
-    <state width="1867" height="643" key="GridCell.Tab.1.right" timestamp="1684199309643">
+    <state width="1867" height="643" key="GridCell.Tab.1.left/1920.0.1536.864/0.0.1920.1080/-1920.0.1920.1080@0.0.1920.1080" timestamp="1684323076921" />
+    <state width="1867" height="643" key="GridCell.Tab.1.right" timestamp="1684323076921">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state width="1867" height="643" key="GridCell.Tab.1.right/1920.0.1536.864/0.0.1920.1080/-1920.0.1920.1080@-1920.0.1920.1080" timestamp="1683038742815" />
-    <state width="1867" height="643" key="GridCell.Tab.1.right/1920.0.1536.864/0.0.1920.1080/-1920.0.1920.1080@0.0.1920.1080" timestamp="1684199309643" />
+    <state width="1867" height="643" key="GridCell.Tab.1.right/1920.0.1536.864/0.0.1920.1080/-1920.0.1920.1080@0.0.1920.1080" timestamp="1684323076921" />
     <state x="-1483" y="209" key="IDE.errors.dialog" timestamp="1682959050354">
       <screen x="-1920" y="0" width="1920" height="1080" />
     </state>
     <state x="-1483" y="209" key="IDE.errors.dialog/1920.0.1536.864/0.0.1920.1080/-1920.0.1920.1080@-1920.0.1920.1080" timestamp="1682959050354" />
-    <state x="374" y="110" key="Maven.ArtifactSearchDialog" timestamp="1681315644271">
+    <state x="374" y="110" key="Maven.ArtifactSearchDialog" timestamp="1684323060880">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="374" y="110" key="Maven.ArtifactSearchDialog/1920.0.1536.864/0.0.1920.1080/-1920.0.1920.1080@0.0.1920.1080" timestamp="1681315644271" />
+    <state x="374" y="110" key="Maven.ArtifactSearchDialog/1920.0.1536.864/0.0.1920.1080/-1920.0.1920.1080@0.0.1920.1080" timestamp="1684323060880" />
     <state x="-1449" y="19" key="SettingsEditor" timestamp="1683035079381">
       <screen x="-1920" y="0" width="1920" height="1080" />
     </state>
     <state x="-1449" y="19" key="SettingsEditor/1920.0.1536.864/0.0.1920.1080/-1920.0.1920.1080@-1920.0.1920.1080" timestamp="1683035079381" />
     <state x="263" y="137" key="SettingsEditor/1920.0.1536.864/0.0.1920.1080/-1920.0.1920.1080@0.0.1920.1080" timestamp="1682419184441" />
-    <state x="609" y="250" key="Vcs.Push.Dialog.v2" timestamp="1684205389323">
+    <state x="609" y="250" key="Vcs.Push.Dialog.v2" timestamp="1684205732033">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="-1311" y="250" key="Vcs.Push.Dialog.v2/1920.0.1536.864/0.0.1920.1080/-1920.0.1920.1080@-1920.0.1920.1080" timestamp="1683037531969" />
-    <state x="609" y="250" key="Vcs.Push.Dialog.v2/1920.0.1536.864/0.0.1920.1080/-1920.0.1920.1080@0.0.1920.1080" timestamp="1684205389323" />
+    <state x="609" y="250" key="Vcs.Push.Dialog.v2/1920.0.1536.864/0.0.1920.1080/-1920.0.1920.1080@0.0.1920.1080" timestamp="1684205732033" />
     <state width="968" height="548" key="XDebugger.FullValuePopup" timestamp="1683036969084">
       <screen x="-1920" y="0" width="1920" height="1080" />
     </state>
@@ -564,10 +655,10 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="532" y="246" key="run.anything.popup/1920.0.1536.864/0.0.1920.1080/-1920.0.1920.1080@0.0.1920.1080" timestamp="1680767283619" />
-    <state x="539" y="45" width="840" height="1034" key="search.everywhere.popup" timestamp="1682003441757">
+    <state x="539" y="45" width="840" height="1034" key="search.everywhere.popup" timestamp="1684219259693">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="539" y="45" width="840" height="1034" key="search.everywhere.popup/1920.0.1536.864/0.0.1920.1080/-1920.0.1920.1080@0.0.1920.1080" timestamp="1682003441757" />
+    <state x="539" y="45" width="840" height="1034" key="search.everywhere.popup/1920.0.1536.864/0.0.1920.1080/-1920.0.1920.1080@0.0.1920.1080" timestamp="1684219259693" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

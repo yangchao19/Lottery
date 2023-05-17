@@ -1,6 +1,8 @@
 package com.yang.lottery.infrastructure.repository;
 
 import com.yang.lottery.common.Constants;
+import com.yang.lottery.domain.activity.model.aggregates.ActivityInfoLimitPageRich;
+import com.yang.lottery.domain.activity.model.req.ActivityInfoLimitPageReq;
 import com.yang.lottery.domain.activity.model.req.PartakeReq;
 import com.yang.lottery.domain.activity.model.res.StockResult;
 import com.yang.lottery.domain.activity.model.vo.*;
@@ -177,5 +179,30 @@ public class ActivityRepository implements IActivityRepository {
 
         // 删除分布式序偶 Key
         redisUtil.del(tokenKey);
+    }
+
+    @Override
+    public ActivityInfoLimitPageRich queryActivityInfoLimitPage(ActivityInfoLimitPageReq req) {
+        Long count = activityDao.queryActivityInfoCount(req);
+        List<Activity> activityList = activityDao.queryActivityInfoList(req);
+        List<ActivityVO> activityVOList = new ArrayList<>();
+        for (Activity activity : activityList) {
+            ActivityVO activityVO = new ActivityVO();
+            activityVO.setId(activity.getId());
+            activityVO.setActivityId(activity.getActivityId());
+            activityVO.setActivityName(activity.getActivityName());
+            activityVO.setActivityDesc(activity.getActivityDesc());
+            activityVO.setBeginDateTime(activity.getBeginDateTime());
+            activityVO.setStockCount(activity.getStockCount());
+            activityVO.setStockSurplusCount(activity.getStockSurplusCount());
+            activityVO.setTakeCount(activity.getTakeCount());
+            activityVO.setStrategyId(activity.getStrategyId());
+            activityVO.setState(activity.getState());
+            activityVO.setCreator(activity.getCreator());
+            activityVO.setCreateTime(activity.getCreateTime());
+            activity.setUpdateTime(activity.getUpdateTime());
+            activityVOList.add(activityVO);
+        }
+        return new ActivityInfoLimitPageRich(count, activityVOList);
     }
 }

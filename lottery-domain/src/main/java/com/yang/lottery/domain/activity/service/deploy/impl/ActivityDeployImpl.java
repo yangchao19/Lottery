@@ -1,7 +1,9 @@
 package com.yang.lottery.domain.activity.service.deploy.impl;
 
 import com.yang.lottery.domain.activity.model.aggregates.ActivityConfigRich;
+import com.yang.lottery.domain.activity.model.aggregates.ActivityInfoLimitPageRich;
 import com.yang.lottery.domain.activity.model.req.ActivityConfigReq;
+import com.yang.lottery.domain.activity.model.req.ActivityInfoLimitPageReq;
 import com.yang.lottery.domain.activity.model.vo.ActivityVO;
 import com.yang.lottery.domain.activity.model.vo.AwardVO;
 import com.yang.lottery.domain.activity.model.vo.StrategyDetailVO;
@@ -74,4 +76,11 @@ public class ActivityDeployImpl implements IActivityDeploy {
     public List<ActivityVO> scanToDoActivityList(Long id) {
         return activityRepository.scanToDoActivityList(id);
     }
+
+    @Override
+    public ActivityInfoLimitPageRich queryActivityInfoLimitPage(ActivityInfoLimitPageReq req) {
+        return null;
+    }
+
+
 }

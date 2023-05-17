@@ -1,5 +1,6 @@
 package com.yang.lottery.infrastructure.dao;
 
+import com.yang.lottery.domain.activity.model.req.ActivityInfoLimitPageReq;
 import com.yang.lottery.domain.activity.model.vo.ActivityVO;
 import com.yang.lottery.domain.activity.model.vo.AlterStateVO;
 import com.yang.lottery.infrastructure.po.Activity;
@@ -58,5 +59,19 @@ public interface IActivityDao {
      * @param activity 入参
      */
     void updateActivityStock(Activity activity);
+
+    /**
+     * 查询活动分页数据量
+     * @param req 入参
+     * @return    数量结果
+     */
+    Long queryActivityInfoCount(ActivityInfoLimitPageReq req);
+
+    /**
+     * 查询活动分页数据列表
+     * @param req 入参
+     * @return 数据列表接骨
+     */
+    List<Activity> queryActivityInfoList(ActivityInfoLimitPageReq req);
 
 }

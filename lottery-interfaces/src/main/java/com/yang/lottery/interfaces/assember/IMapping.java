@@ -35,6 +35,14 @@ public interface IMapping<SOURCE, TARGET> {
 
 
     /**
+     * 映射同名属性，集合形式
+     * @param var1 源
+     * @return     结果
+     */
+    @InheritConfiguration(name = "sourceToTarget")
+    List<TARGET> sourceToTarget(List<SOURCE> var1);
+
+    /**
      * 反向，映射同名属性，集合形式
      * @param var1  源
      * @return      结果

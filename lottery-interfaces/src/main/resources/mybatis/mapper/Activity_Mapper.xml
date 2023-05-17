@@ -58,4 +58,31 @@
         ORDER BY id ASC
         LIMIT 10
     </select>
+    <select id="queryActivityInfoCount" parameterType="com.yang.lottery.domain.activity.model.req.ActivityInfoLimitPageReq" resultType="java.lang.Long">
+        SELECT count(*) FROM activity
+        <where>
+            <if test="null != activityId">
+                activity_id = #{activityId}
+            </if>
+            <if test="null != activityName">
+                activity_name = #{activityName}
+            </if>
+        </where>
+    </select>
+
+    <select id="queryActivityInfoList" parameterType="com.yang.lottery.domain.activity.model.req.ActivityInfoLimitPageReq" resultType="com.yang.lottery.infrastructure.po.Activity">
+        SELECT id, activity_id, activity_name, activity_desc, begin_date_time, end_date_time,
+            stock_count, stock_surplus_count, take_count, strategy_id, state, creator, create_time, update_time
+        FROM activity
+        <where>
+            <if test="null != activityId">
+                activity_id = #{activityId}
+            </if>
+            <if test="null != activityName">
+                activity_name = #{activityName}
+            </if>
+        </where>
+        ORDER BY id DESC
+        LIMIT #{pageBegin}, #{pageEnd}
+    </select>
 </mapper>

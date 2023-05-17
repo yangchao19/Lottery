@@ -1,66 +1,80 @@
-package com.yang.lottery.domain.activity.model.vo;
+package com.yang.lottery.rpc.activity.deploy.dto;
 
+import java.io.Serializable;
 import java.util.Date;
 
 /**
- * @description: 活动信息配置
+ * @description:
  * @author：杨超
- * @date: 2023/4/2
+ * @date: 2023/5/17
  * @Copyright：
  */
-public class ActivityVO {
+public class ActivityDTO implements Serializable {
     /**
-     * 自增id
+     * 自增ID
      */
     private Long id;
+
     /**
-     * 活动id
+     * 活动ID
      */
     private Long activityId;
+
     /**
      * 活动名称
      */
     private String activityName;
+
     /**
      * 活动描述
      */
     private String activityDesc;
+
     /**
-     * 活动开始时间
+     * 开始时间
      */
     private Date beginDateTime;
+
     /**
-     * 活动结束时间
+     * 结束时间
      */
     private Date endDateTime;
+
     /**
      * 库存
      */
     private Integer stockCount;
+
     /**
      * 库存剩余
      */
     private Integer stockSurplusCount;
+
     /**
      * 每人可参与次数
      */
     private Integer takeCount;
+
     /**
      * 策略ID
      */
     private Long strategyId;
+
     /**
-     * 活动状态
+     * 活动状态：1编辑、2提审、3撤审、4通过、5运行(审核通过后worker扫描状态)、6拒绝、7关闭、8开启
      */
     private Integer state;
+
     /**
-     * 活动创建人
+     * 创建人
      */
     private String creator;
+
     /**
      * 创建时间
      */
     private Date createTime;
+
     /**
      * 修改时间
      */
@@ -130,36 +144,20 @@ public class ActivityVO {
         this.stockSurplusCount = stockSurplusCount;
     }
 
-    public Long getStrategyId() {
-        return strategyId;
-    }
-
-    public void setStrategyId(Long strategyId) {
-        this.strategyId = strategyId;
-    }
-
-    public Date getCreateTime() {
-        return createTime;
-    }
-
-    public void setCreateTime(Date createTime) {
-        this.createTime = createTime;
-    }
-
-    public Date getUpdateTime() {
-        return updateTime;
-    }
-
-    public void setUpdateTime(Date updateTime) {
-        this.updateTime = updateTime;
-    }
-
     public Integer getTakeCount() {
         return takeCount;
     }
 
     public void setTakeCount(Integer takeCount) {
         this.takeCount = takeCount;
+    }
+
+    public Long getStrategyId() {
+        return strategyId;
+    }
+
+    public void setStrategyId(Long strategyId) {
+        this.strategyId = strategyId;
     }
 
     public Integer getState() {
@@ -178,9 +176,25 @@ public class ActivityVO {
         this.creator = creator;
     }
 
+    public Date getCreateTime() {
+        return createTime;
+    }
+
+    public void setCreateTime(Date createTime) {
+        this.createTime = createTime;
+    }
+
+    public Date getUpdateTime() {
+        return updateTime;
+    }
+
+    public void setUpdateTime(Date updateTime) {
+        this.updateTime = updateTime;
+    }
+
     @Override
     public String toString() {
-        return "ActivityVO{" +
+        return "ActivityPageReq{" +
                 "id=" + id +
                 ", activityId=" + activityId +
                 ", activityName='" + activityName + '\'' +
