@@ -19,11 +19,25 @@
         <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
       </path>
     </expand>
-    <select />
+    <select>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </select>
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a68943e0-afb0-4e25-9364-505ee637b9aa" name="Default Changelist" comment="lottery21">
+      <change afterPath="$PROJECT_DIR$/doc/sql/lottery.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doc/sql/lottery_01.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lottery-application/src/main/java/com/yang/lottery/application/process/deploy/impl/ActivityDeployProcessImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/lottery-application/src/main/java/com/yang/lottery/application/process/deploy/impl/ActivityDeployProcessImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lottery-domain/src/main/java/com/yang/lottery/domain/strategy/service/algorithm/BaseAlgorithm.java" beforeDir="false" afterPath="$PROJECT_DIR$/lottery-domain/src/main/java/com/yang/lottery/domain/strategy/service/algorithm/BaseAlgorithm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lottery-interfaces/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/lottery-interfaces/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lottery-rpc/src/main/java/com/yang/lottery/rpc/activity/deploy/req/ActivityPageReq.java" beforeDir="false" afterPath="$PROJECT_DIR$/lottery-rpc/src/main/java/com/yang/lottery/rpc/activity/deploy/req/ActivityPageReq.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,7 +55,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="lottery-wx" />
+        <entry key="$PROJECT_DIR$" value="lottery08" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -71,6 +85,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="DatabaseDriversLRU" value="mysql" />
+    <property name="Git.Branch.Popup.ShowAllRemotes" value="true" />
     <property name="RequestMappingsPanelOrder0" value="0" />
     <property name="RequestMappingsPanelOrder1" value="1" />
     <property name="RequestMappingsPanelWidth0" value="75" />
@@ -85,7 +100,7 @@
     <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="database.data.extractors.current.export.id" value="Comma-separated (CSV)_id" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/lottery-application/src/main/java/com/yang/lottery/application/process/draw" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../resume/Lottery-API" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -97,7 +112,7 @@
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.29806808" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="MavenSettings" />
     <property name="two.files.diff.last.used.file" value="$PROJECT_DIR$/lottery-rpc/src/main/java/com/yang/lottery/rpc/dto/ActivityDto.java" />
   </component>
   <component name="ReactorSettings">
@@ -128,21 +143,6 @@
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ActivityProcessTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="lottery-interfaces" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.yang.lottery.test.application.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.yang.lottery.test.application" />
-      <option name="MAIN_CLASS_NAME" value="com.yang.lottery.test.application.ActivityProcessTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -211,6 +211,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="SpringRunnerTest.test_select" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="lottery-interfaces" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.yang.lottery.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.yang.lottery.test" />
+      <option name="MAIN_CLASS_NAME" value="com.yang.lottery.test.SpringRunnerTest" />
+      <option name="METHOD_NAME" value="test_select" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="LotteryApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="lottery-interfaces" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.yang.lottery.LotteryApplication" />
@@ -220,11 +236,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.SpringRunnerTest.test_select" />
         <item itemvalue="JUnit.LotteryActivityBoothTest.test_doDraw" />
-        <item itemvalue="JUnit.ActivityProcessTest.test_doDrawProcess" />
-        <item itemvalue="JUnit.ActivityProcessTest" />
         <item itemvalue="JUnit.KafkaProducerTest.test_send" />
         <item itemvalue="JUnit.KafkaProducerTest" />
+        <item itemvalue="JUnit.ActivityProcessTest.test_doDrawProcess" />
       </list>
     </recent_temporary>
   </component>
@@ -268,6 +284,22 @@
       <workItem from="1683182992218" duration="8708000" />
       <workItem from="1683378124914" duration="4646000" />
       <workItem from="1684107554473" duration="30206000" />
+      <workItem from="1684830135917" duration="2275000" />
+      <workItem from="1684843889574" duration="3527000" />
+      <workItem from="1684994208196" duration="58000" />
+      <workItem from="1685037144956" duration="3441000" />
+      <workItem from="1685116984186" duration="5523000" />
+      <workItem from="1686316163694" duration="980000" />
+      <workItem from="1686321680743" duration="1784000" />
+      <workItem from="1688693222385" duration="2237000" />
+      <workItem from="1689176802555" duration="1138000" />
+      <workItem from="1689212746901" duration="81000" />
+      <workItem from="1689577260430" duration="6415000" />
+      <workItem from="1689600448312" duration="50000" />
+      <workItem from="1689611954722" duration="563000" />
+      <workItem from="1689612724379" duration="374000" />
+      <workItem from="1689819166779" duration="70000" />
+      <workItem from="1689949477705" duration="6397000" />
     </task>
     <task id="LOCAL-00001" summary="lottery07">
       <created>1680339418327</created>
@@ -392,7 +424,13 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="CUSTOM_BOOLEAN_PROPERTIES">
+                <map>
+                  <entry key="Show.Git.Branches" value="true" />
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
@@ -420,10 +458,6 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="452" y="114" key="#Deployment/1920.0.1536.864/0.0.1920.1080/-1920.0.1920.1080@0.0.1920.1080" timestamp="1682792964768" />
-    <state x="582" y="201" key="#Inspections" timestamp="1680420195136">
-      <screen x="0" y="0" width="1920" height="1080" />
-    </state>
-    <state x="582" y="201" key="#Inspections/1920.0.1536.864/0.0.1920.1080/-1920.0.1920.1080@0.0.1920.1080" timestamp="1680420195136" />
     <state x="432" y="97" key="#SSH_Configurations" timestamp="1682792960957">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
@@ -448,7 +482,6 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="538" y="339" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/1920.0.1536.864/0.0.1920.1080/-1920.0.1920.1080@0.0.1920.1080" timestamp="1681714760637" />
-    <state x="2350" y="271" width="675" height="333" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/1920.0.1536.864/0.0.1920.1080/-1920.0.1920.1080@1920.0.1536.864" timestamp="1680183554915" />
     <state x="0" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1681391373678">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
@@ -457,85 +490,58 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="624" y="224" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/1920.0.1536.864/0.0.1920.1080/-1920.0.1920.1080@0.0.1920.1080" timestamp="1681387780900" />
-    <state x="659" y="346" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1679900209401">
+    <state x="689" y="224" key="FileChooserDialogImpl" timestamp="1690013094950">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="659" y="346" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/1920.0.1536.864/0.0.1920.1080/-1920.0.1920.1080@0.0.1920.1080" timestamp="1679900209401" />
-    <state width="630" height="582" key="DebuggerActiveHint" timestamp="1681139492248">
+    <state x="588" y="156" key="FileChooserDialogImpl/0.0.1536.864@0.0.1536.864" timestamp="1689612523899" />
+    <state x="-1185" y="195" key="FileChooserDialogImpl/1920.0.1536.864/0.0.1920.1080/-1920.0.1920.1080@-1920.0.1920.1080" timestamp="1689600497597" />
+    <state x="689" y="224" key="FileChooserDialogImpl/1920.0.1536.864/0.0.1920.1080/-1920.0.1920.1080@0.0.1920.1080" timestamp="1690013094950" />
+    <state width="284" height="372" key="Git.Branch.Popup" timestamp="1689612494063">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="284" height="372" key="Git.Branch.Popup/0.0.1536.864@0.0.1536.864" timestamp="1689612494063" />
+    <state width="285" height="396" key="Git.Branch.Popup/1920.0.1536.864/0.0.1920.1080/-1920.0.1920.1080@-1920.0.1920.1080" timestamp="1686553356658" />
+    <state width="341" height="452" key="Git.Branch.Popup/1920.0.1536.864/0.0.1920.1080/-1920.0.1920.1080@0.0.1920.1080" timestamp="1689176820359" />
+    <state width="1867" height="344" key="GridCell.Tab.0.bottom" timestamp="1690014016427">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="630" height="582" key="DebuggerActiveHint/1920.0.1536.864/0.0.1920.1080/-1920.0.1920.1080@0.0.1920.1080" timestamp="1681139492248" />
-    <state x="93" y="61" width="1736" height="896" key="DiffContextDialog" timestamp="1679914566847">
+    <state width="1867" height="643" key="GridCell.Tab.0.bottom/1920.0.1536.864/0.0.1920.1080/-1920.0.1920.1080@-1920.0.1920.1080" timestamp="1684912194689" />
+    <state width="1867" height="344" key="GridCell.Tab.0.bottom/1920.0.1536.864/0.0.1920.1080/-1920.0.1920.1080@0.0.1920.1080" timestamp="1690014016427" />
+    <state width="1867" height="344" key="GridCell.Tab.0.center" timestamp="1690014016426">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="93" y="61" width="1736" height="896" key="DiffContextDialog/1920.0.1536.864/0.0.1920.1080/-1920.0.1920.1080@0.0.1920.1080" timestamp="1679914566847" />
-    <state x="-1185" y="195" key="FileChooserDialogImpl" timestamp="1682957249705">
-      <screen x="-1920" y="0" width="1920" height="1080" />
-    </state>
-    <state x="-1185" y="195" key="FileChooserDialogImpl/1920.0.1536.864/0.0.1920.1080/-1920.0.1920.1080@-1920.0.1920.1080" timestamp="1682957249705" />
-    <state x="689" y="224" key="FileChooserDialogImpl/1920.0.1536.864/0.0.1920.1080/-1920.0.1920.1080@0.0.1920.1080" timestamp="1682783981881" />
-    <state x="720" y="179" key="FileChooserDialogImpl/1920.0.1536.864/0.0.1920.1080/-1920.0.1920.1080@1920.0.1536.864" timestamp="1679990034619" />
-    <state width="339" height="450" key="Git.Branch.Popup" timestamp="1684205797690">
+    <state width="1867" height="643" key="GridCell.Tab.0.center/1920.0.1536.864/0.0.1920.1080/-1920.0.1920.1080@-1920.0.1920.1080" timestamp="1684912194689" />
+    <state width="1867" height="344" key="GridCell.Tab.0.center/1920.0.1536.864/0.0.1920.1080/-1920.0.1920.1080@0.0.1920.1080" timestamp="1690014016426" />
+    <state width="1867" height="344" key="GridCell.Tab.0.left" timestamp="1690014016425">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="283" height="394" key="Git.Branch.Popup/1920.0.1536.864/0.0.1920.1080/-1920.0.1920.1080@-1920.0.1920.1080" timestamp="1683037497695" />
-    <state width="339" height="450" key="Git.Branch.Popup/1920.0.1536.864/0.0.1920.1080/-1920.0.1920.1080@0.0.1920.1080" timestamp="1684205797690" />
-    <state x="706" y="400" key="Github.CreateGistDialog" timestamp="1680162925238">
+    <state width="1867" height="643" key="GridCell.Tab.0.left/1920.0.1536.864/0.0.1920.1080/-1920.0.1920.1080@-1920.0.1920.1080" timestamp="1684912194689" />
+    <state width="1867" height="344" key="GridCell.Tab.0.left/1920.0.1536.864/0.0.1920.1080/-1920.0.1920.1080@0.0.1920.1080" timestamp="1690014016425" />
+    <state width="1867" height="344" key="GridCell.Tab.0.right" timestamp="1690014016427">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="706" y="400" key="Github.CreateGistDialog/1920.0.1536.864/0.0.1920.1080/-1920.0.1920.1080@0.0.1920.1080" timestamp="1680162925238" />
-    <state x="782" y="371" width="621" height="354" key="Github.ShareDialog" timestamp="1680163771685">
-      <screen x="0" y="0" width="1920" height="1080" />
-    </state>
-    <state x="782" y="371" width="621" height="354" key="Github.ShareDialog/1920.0.1536.864/0.0.1920.1080/-1920.0.1920.1080@0.0.1920.1080" timestamp="1680163771685" />
-    <state x="576" y="172" key="Github.UntrackedFilesDialog" timestamp="1680163784522">
-      <screen x="0" y="0" width="1920" height="1080" />
-    </state>
-    <state x="576" y="172" key="Github.UntrackedFilesDialog/1920.0.1536.864/0.0.1920.1080/-1920.0.1920.1080@0.0.1920.1080" timestamp="1680163784522" />
-    <state width="1867" height="643" key="GridCell.Tab.0.bottom" timestamp="1684323086603">
-      <screen x="0" y="0" width="1920" height="1080" />
-    </state>
-    <state width="1867" height="643" key="GridCell.Tab.0.bottom/1920.0.1536.864/0.0.1920.1080/-1920.0.1920.1080@-1920.0.1920.1080" timestamp="1683038742815" />
-    <state width="1867" height="643" key="GridCell.Tab.0.bottom/1920.0.1536.864/0.0.1920.1080/-1920.0.1920.1080@0.0.1920.1080" timestamp="1684323086603" />
-    <state width="1483" height="664" key="GridCell.Tab.0.bottom/1920.0.1536.864/0.0.1920.1080/-1920.0.1920.1080@1920.0.1536.864" timestamp="1680184384909" />
-    <state width="1867" height="643" key="GridCell.Tab.0.center" timestamp="1684323086603">
-      <screen x="0" y="0" width="1920" height="1080" />
-    </state>
-    <state width="1867" height="643" key="GridCell.Tab.0.center/1920.0.1536.864/0.0.1920.1080/-1920.0.1920.1080@-1920.0.1920.1080" timestamp="1683038742815" />
-    <state width="1867" height="643" key="GridCell.Tab.0.center/1920.0.1536.864/0.0.1920.1080/-1920.0.1920.1080@0.0.1920.1080" timestamp="1684323086603" />
-    <state width="1483" height="664" key="GridCell.Tab.0.center/1920.0.1536.864/0.0.1920.1080/-1920.0.1920.1080@1920.0.1536.864" timestamp="1680184384909" />
-    <state width="1867" height="643" key="GridCell.Tab.0.left" timestamp="1684323086602">
-      <screen x="0" y="0" width="1920" height="1080" />
-    </state>
-    <state width="1867" height="643" key="GridCell.Tab.0.left/1920.0.1536.864/0.0.1920.1080/-1920.0.1920.1080@-1920.0.1920.1080" timestamp="1683038742815" />
-    <state width="1867" height="643" key="GridCell.Tab.0.left/1920.0.1536.864/0.0.1920.1080/-1920.0.1920.1080@0.0.1920.1080" timestamp="1684323086602" />
-    <state width="1483" height="664" key="GridCell.Tab.0.left/1920.0.1536.864/0.0.1920.1080/-1920.0.1920.1080@1920.0.1536.864" timestamp="1680184384908" />
-    <state width="1867" height="643" key="GridCell.Tab.0.right" timestamp="1684323086603">
-      <screen x="0" y="0" width="1920" height="1080" />
-    </state>
-    <state width="1867" height="643" key="GridCell.Tab.0.right/1920.0.1536.864/0.0.1920.1080/-1920.0.1920.1080@-1920.0.1920.1080" timestamp="1683038742815" />
-    <state width="1867" height="643" key="GridCell.Tab.0.right/1920.0.1536.864/0.0.1920.1080/-1920.0.1920.1080@0.0.1920.1080" timestamp="1684323086603" />
-    <state width="1483" height="664" key="GridCell.Tab.0.right/1920.0.1536.864/0.0.1920.1080/-1920.0.1920.1080@1920.0.1536.864" timestamp="1680184384909" />
-    <state width="1867" height="643" key="GridCell.Tab.1.bottom" timestamp="1684323076921">
+    <state width="1867" height="643" key="GridCell.Tab.0.right/1920.0.1536.864/0.0.1920.1080/-1920.0.1920.1080@-1920.0.1920.1080" timestamp="1684912194689" />
+    <state width="1867" height="344" key="GridCell.Tab.0.right/1920.0.1536.864/0.0.1920.1080/-1920.0.1920.1080@0.0.1920.1080" timestamp="1690014016427" />
+    <state width="1867" height="816" key="GridCell.Tab.1.bottom" timestamp="1690013733987">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state width="1867" height="643" key="GridCell.Tab.1.bottom/1920.0.1536.864/0.0.1920.1080/-1920.0.1920.1080@-1920.0.1920.1080" timestamp="1683038742815" />
-    <state width="1867" height="643" key="GridCell.Tab.1.bottom/1920.0.1536.864/0.0.1920.1080/-1920.0.1920.1080@0.0.1920.1080" timestamp="1684323076921" />
-    <state width="1867" height="643" key="GridCell.Tab.1.center" timestamp="1684323076921">
+    <state width="1867" height="816" key="GridCell.Tab.1.bottom/1920.0.1536.864/0.0.1920.1080/-1920.0.1920.1080@0.0.1920.1080" timestamp="1690013733987" />
+    <state width="1867" height="816" key="GridCell.Tab.1.center" timestamp="1690013733987">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state width="1867" height="643" key="GridCell.Tab.1.center/1920.0.1536.864/0.0.1920.1080/-1920.0.1920.1080@-1920.0.1920.1080" timestamp="1683038742815" />
-    <state width="1867" height="643" key="GridCell.Tab.1.center/1920.0.1536.864/0.0.1920.1080/-1920.0.1920.1080@0.0.1920.1080" timestamp="1684323076921" />
-    <state width="1867" height="643" key="GridCell.Tab.1.left" timestamp="1684323076921">
+    <state width="1867" height="816" key="GridCell.Tab.1.center/1920.0.1536.864/0.0.1920.1080/-1920.0.1920.1080@0.0.1920.1080" timestamp="1690013733987" />
+    <state width="1867" height="816" key="GridCell.Tab.1.left" timestamp="1690013733987">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state width="1867" height="643" key="GridCell.Tab.1.left/1920.0.1536.864/0.0.1920.1080/-1920.0.1920.1080@-1920.0.1920.1080" timestamp="1683038742815" />
-    <state width="1867" height="643" key="GridCell.Tab.1.left/1920.0.1536.864/0.0.1920.1080/-1920.0.1920.1080@0.0.1920.1080" timestamp="1684323076921" />
-    <state width="1867" height="643" key="GridCell.Tab.1.right" timestamp="1684323076921">
+    <state width="1867" height="816" key="GridCell.Tab.1.left/1920.0.1536.864/0.0.1920.1080/-1920.0.1920.1080@0.0.1920.1080" timestamp="1690013733987" />
+    <state width="1867" height="816" key="GridCell.Tab.1.right" timestamp="1690013733987">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state width="1867" height="643" key="GridCell.Tab.1.right/1920.0.1536.864/0.0.1920.1080/-1920.0.1920.1080@-1920.0.1920.1080" timestamp="1683038742815" />
-    <state width="1867" height="643" key="GridCell.Tab.1.right/1920.0.1536.864/0.0.1920.1080/-1920.0.1920.1080@0.0.1920.1080" timestamp="1684323076921" />
+    <state width="1867" height="816" key="GridCell.Tab.1.right/1920.0.1536.864/0.0.1920.1080/-1920.0.1920.1080@0.0.1920.1080" timestamp="1690013733987" />
     <state x="-1483" y="209" key="IDE.errors.dialog" timestamp="1682959050354">
       <screen x="-1920" y="0" width="1920" height="1080" />
     </state>
@@ -544,11 +550,15 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="374" y="110" key="Maven.ArtifactSearchDialog/1920.0.1536.864/0.0.1920.1080/-1920.0.1920.1080@0.0.1920.1080" timestamp="1684323060880" />
-    <state x="-1449" y="19" key="SettingsEditor" timestamp="1683035079381">
+    <state x="263" y="137" key="SettingsEditor" timestamp="1690013145996">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="-1449" y="19" key="SettingsEditor/1920.0.1536.864/0.0.1920.1080/-1920.0.1920.1080@-1920.0.1920.1080" timestamp="1685039557843" />
+    <state x="263" y="137" key="SettingsEditor/1920.0.1536.864/0.0.1920.1080/-1920.0.1920.1080@0.0.1920.1080" timestamp="1690013145996" />
+    <state width="275" height="572" key="SqlResolveConfigurable" timestamp="1685039541424">
       <screen x="-1920" y="0" width="1920" height="1080" />
     </state>
-    <state x="-1449" y="19" key="SettingsEditor/1920.0.1536.864/0.0.1920.1080/-1920.0.1920.1080@-1920.0.1920.1080" timestamp="1683035079381" />
-    <state x="263" y="137" key="SettingsEditor/1920.0.1536.864/0.0.1920.1080/-1920.0.1920.1080@0.0.1920.1080" timestamp="1682419184441" />
+    <state width="275" height="572" key="SqlResolveConfigurable/1920.0.1536.864/0.0.1920.1080/-1920.0.1920.1080@-1920.0.1920.1080" timestamp="1685039541424" />
     <state x="609" y="250" key="Vcs.Push.Dialog.v2" timestamp="1684333111156">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
@@ -558,42 +568,29 @@
       <screen x="-1920" y="0" width="1920" height="1080" />
     </state>
     <state width="968" height="548" key="XDebugger.FullValuePopup/1920.0.1536.864/0.0.1920.1080/-1920.0.1920.1080@-1920.0.1920.1080" timestamp="1683036969084" />
-    <state x="625" y="488" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1684332841433">
+    <state x="625" y="488" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1689177406483">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="625" y="488" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/1920.0.1536.864/0.0.1920.1080/-1920.0.1920.1080@0.0.1920.1080" timestamp="1684332841433" />
-    <state x="634" y="416" key="git4idea.remote.GitConfigureRemotesDialog" timestamp="1680597896428">
-      <screen x="0" y="0" width="1920" height="1080" />
+    <state x="625" y="488" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/1920.0.1536.864/0.0.1920.1080/-1920.0.1920.1080@0.0.1920.1080" timestamp="1689177406483" />
+    <state x="424" y="73" key="git4idea.branch.GitSmartOperationDialog" timestamp="1689612462896">
+      <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state x="634" y="416" key="git4idea.remote.GitConfigureRemotesDialog/1920.0.1536.864/0.0.1920.1080/-1920.0.1920.1080@0.0.1920.1080" timestamp="1680597896428" />
+    <state x="424" y="73" key="git4idea.branch.GitSmartOperationDialog/0.0.1536.864@0.0.1536.864" timestamp="1689612462896" />
     <state x="739" y="340" key="git4idea.ui.GitTagDialog" timestamp="1681648278406">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="739" y="340" key="git4idea.ui.GitTagDialog/1920.0.1536.864/0.0.1920.1080/-1920.0.1920.1080@0.0.1920.1080" timestamp="1681648278406" />
-    <state x="-1762" y="119" key="new project wizard" timestamp="1682854597213">
-      <screen x="-1920" y="0" width="1920" height="1080" />
-    </state>
-    <state x="-1762" y="119" key="new project wizard/1920.0.1536.864/0.0.1920.1080/-1920.0.1920.1080@-1920.0.1920.1080" timestamp="1682854597213" />
-    <state x="158" y="119" key="new project wizard/1920.0.1536.864/0.0.1920.1080/-1920.0.1920.1080@0.0.1920.1080" timestamp="1679836699482" />
-    <state x="532" y="246" key="run.anything.popup" timestamp="1680767283619">
+    <state x="107" y="175" key="new project wizard" timestamp="1690013195404">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="532" y="246" key="run.anything.popup/1920.0.1536.864/0.0.1920.1080/-1920.0.1920.1080@0.0.1920.1080" timestamp="1680767283619" />
+    <state x="-1762" y="119" key="new project wizard/1920.0.1536.864/0.0.1920.1080/-1920.0.1920.1080@-1920.0.1920.1080" timestamp="1682854597213" />
+    <state x="107" y="175" key="new project wizard/1920.0.1536.864/0.0.1920.1080/-1920.0.1920.1080@0.0.1920.1080" timestamp="1690013195404" />
     <state x="539" y="45" width="840" height="1034" key="search.everywhere.popup" timestamp="1684219259693">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="539" y="45" width="840" height="1034" key="search.everywhere.popup/1920.0.1536.864/0.0.1920.1080/-1920.0.1920.1080@0.0.1920.1080" timestamp="1684219259693" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/lottery-interfaces/src/test/java/com/yang/lottery/test/domain/ActivityTest.java</url>
-          <line>202</line>
-          <option name="timeStamp" value="9" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
     <pin-to-top-manager>
       <pinned-members>
         <PinnedItemInfo parentTag="org.springframework.cglib.proxy.MethodProxy" memberName="initLock" />

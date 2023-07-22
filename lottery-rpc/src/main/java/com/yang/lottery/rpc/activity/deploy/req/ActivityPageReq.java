@@ -3,7 +3,6 @@ package com.yang.lottery.rpc.activity.deploy.req;
 import com.yang.lottery.common.PageRequest;
 
 import java.io.Serializable;
-import java.util.Date;
 
 /**
  * @description:

@@ -35,7 +35,9 @@ public abstract class BaseAlgorithm implements IDrawAlgorithm {
         // 保存奖品概率信息
         awardRateInfoMap.put(strategyId, awardRateVOList);
 
-        //返回一个长为128的字符数组？
+        // 使用computeIfAbsent方法来获取rateTupleMap中指定strategyId对应的值。
+        // 如果该值存在，则直接返回；如果不存在，则使用lambda表达式创建一个新的字符串数组，
+        // 并将其放入rateTupleMap中。该字符串数组的长度是RATE_TUPLE_LENGTH。
         String[] rateTuple = rateTupleMap.computeIfAbsent(strategyId, k -> new String[RATE_TUPLE_LENGTH]);
 
         int cursorVal = 0;

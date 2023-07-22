@@ -13,19 +13,19 @@ mini-db-router:
       list: db01,db02
       db00:
         driver-class-name: com.mysql.jdbc.Driver
-        url: jdbc:mysql://127.0.0.1:3306/lottery?useUnicode=true
+        url: jdbc:mysql://124.222.253.96:3306/lottery?useUnicode=true
         username: root
-        password: hsp
+        password: 1234
       db01:
         driver-class-name: com.mysql.jdbc.Driver
-        url: jdbc:mysql://127.0.0.1:3306/lottery_01?useUnicode=true
+        url: jdbc:mysql://124.222.253.96:3306/lottery_01?useUnicode=true
         username: root
-        password: hsp
+        password: 1234
       db02:
         driver-class-name: com.mysql.jdbc.Driver
-        url: jdbc:mysql://127.0.0.1:3306/lottery_02?useUnicode=true
+        url: jdbc:mysql://124.222.253.96:3306/lottery_02?useUnicode=true
         username: root
-        password: hsp
+        password: 1234
 
 
 mybatis:
@@ -115,6 +115,6 @@ xxl:
       appname: lottery-job
       ip: hyd8xj.natappfree.cc
       port: 9998
-      logpath: E:\java\project\xxl-job-2.3.0\jobhandler
+      logpath: \java\project\xxl-job\jobhandler
       logretentiondays: 50
     accessToken: b1e597c6ea5c0bae
