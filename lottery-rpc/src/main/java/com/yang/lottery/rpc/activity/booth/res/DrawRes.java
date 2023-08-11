@@ -26,4 +26,5 @@ public class DrawRes extends Result implements Serializable {
     public void setAwardDTO(AwardDTO awardDTO) {
         this.awardDTO = awardDTO;
     }
+
 }

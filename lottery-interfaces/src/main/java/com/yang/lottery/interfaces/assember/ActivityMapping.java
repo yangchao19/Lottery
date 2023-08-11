@@ -6,7 +6,6 @@ import org.mapstruct.Mapper;
 import org.mapstruct.ReportingPolicy;
 
 import java.util.List;
-import java.util.stream.Stream;
 
 /**
  * @description: 活动对象转换配置
