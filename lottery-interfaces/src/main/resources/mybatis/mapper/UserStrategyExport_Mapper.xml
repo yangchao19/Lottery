@@ -8,7 +8,7 @@
         <result column="activity_id" property="activityId"/>
         <result column="order_id" property="orderId"/>
         <result column="strategy_id" property="strategyId"/>
-        <result column="strategy_type" property="strategyMode"/>
+        <result column="strategy_mode" property="strategyMode"/>
         <result column="grant_type" property="grantType"/>
         <result column="grant_date" property="grantDate"/>
         <result column="grant_state" property="grantState"/>
@@ -22,7 +22,7 @@
     </resultMap>
     <insert id="insert" parameterType="com.yang.lottery.infrastructure.po.UserStrategyExport">
         INSERT INTO user_strategy_export
-        (u_id, activity_id, order_id, strategy_id, strategy_type,
+        (u_id, activity_id, order_id, strategy_id, strategy_mode,
          grant_type, grant_date, grant_state, award_id, award_type,
          award_name, award_content, uuid, create_time, update_time)
          VALUES
@@ -42,7 +42,7 @@
     </update>
     <select id="queryUserStrategyExportByUId"
             resultType="com.yang.lottery.infrastructure.po.UserStrategyExport">
-        SELECT id, u_id, activity_id, order_id, strategy_id, strategy_type,
+        SELECT id, u_id, activity_id, order_id, strategy_id, strategy_mode,
                grant_type, grant_date, grant_state, award_id, award_type,
                award_name, award_content, uuid, create_time, update_time
         FROM user_strategy_export

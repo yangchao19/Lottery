@@ -144,6 +144,8 @@ public class ActivityProcessImpl implements IActivityProcess {
         drawOrderVO.setAwardType(drawAwardVO.getAwardType());
         drawOrderVO.setAwardName(drawAwardVO.getAwardName());
         drawOrderVO.setAwardContent(drawAwardVO.getAwardContent());
+        drawOrderVO.setOrderId(orderId);
+        drawOrderVO.setStrategyId(strategyId);
         return drawOrderVO;
     }
 

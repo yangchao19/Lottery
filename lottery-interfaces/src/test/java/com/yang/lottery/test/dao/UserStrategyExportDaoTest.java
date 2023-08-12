@@ -31,11 +31,13 @@ public class UserStrategyExportDaoTest {
     @Test
     public void test_insert() {
         UserStrategyExport userStrategyExport = new UserStrategyExport();
-        userStrategyExport.setuId("Uhdgkw766120d");
-        userStrategyExport.setActivityId(idGeneratorMap.get(Constants.Ids.ShortCode).nextId());
+        userStrategyExport.setuId("yangchao");
+        //userStrategyExport.setActivityId(idGeneratorMap.get(Constants.Ids.ShortCode).nextId());
+        userStrategyExport.setActivityId(100001L);
         userStrategyExport.setOrderId(idGeneratorMap.get(Constants.Ids.SnowFlake).nextId());
         userStrategyExport.setStrategyId(idGeneratorMap.get(Constants.Ids.RandomNumeric).nextId());
-        userStrategyExport.setStrategyMode(Constants.StrategyMode.SINGLE.getCode());
+        //userStrategyExport.setStrategyMode(Constants.StrategyMode.SINGLE.getCode());
+        userStrategyExport.setStrategyMode(Constants.StrategyMode.ENTIRETY.getCode());
         userStrategyExport.setGrantType(1);
         userStrategyExport.setGrantDate(new Date());
         userStrategyExport.setGrantState(1);
@@ -46,6 +48,7 @@ public class UserStrategyExportDaoTest {
         userStrategyExport.setUuid(String.valueOf(userStrategyExport.getOrderId()));
 
         userStrategyExportDao.insert(userStrategyExport);
+        logger.info(userStrategyExport.toString());
     }
 
     @Test

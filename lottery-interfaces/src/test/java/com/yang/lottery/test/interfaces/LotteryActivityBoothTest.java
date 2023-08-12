@@ -33,7 +33,7 @@ public class LotteryActivityBoothTest {
     @Test
     public void test_doDraw() {
         DrawReq drawReq = new DrawReq();
-        drawReq.setuId("xiaofuge");
+        drawReq.setuId("yangchao");
         drawReq.setActivityId(100001L);
         DrawRes drawRes = lotteryActivityBooth.doDraw(drawReq);
         logger.info("请求参数：{}", JSON.toJSONString(drawReq));
@@ -43,7 +43,7 @@ public class LotteryActivityBoothTest {
     @Test
     public void test_doQuantificationDraw() {
         QuantificationDrawReq quantificationDrawReq = new QuantificationDrawReq();
-        quantificationDrawReq.setuId("xiaofuge");
+        quantificationDrawReq.setuId("yangchao");
         quantificationDrawReq.setTreeId(2110081902L);
         quantificationDrawReq.setValMap(new HashMap<String,Object>() {{
             put("gender","man");

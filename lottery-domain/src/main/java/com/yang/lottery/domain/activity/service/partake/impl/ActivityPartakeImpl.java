@@ -8,7 +8,6 @@ import com.yang.lottery.domain.activity.model.res.StockResult;
 import com.yang.lottery.domain.activity.model.vo.*;
 import com.yang.lottery.domain.activity.repository.IUserTakeActivityRepository;
 import com.yang.lottery.domain.activity.service.partake.BaseActivityPartake;
-import com.yang.lottery.domain.support.ids.IIdGenerator;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.dao.DuplicateKeyException;
@@ -17,7 +16,6 @@ import org.springframework.transaction.support.TransactionTemplate;
 
 import javax.annotation.Resource;
 import java.util.List;
-import java.util.Map;
 
 /**
  * @description:
@@ -32,9 +30,6 @@ public class ActivityPartakeImpl extends BaseActivityPartake {
 
     @Resource
     private IUserTakeActivityRepository userTakeActivityRepository;
-
-    @Resource
-    private Map<Constants.Ids, IIdGenerator> idGeneratorMap;
 
     @Resource
     private TransactionTemplate transactionTemplate;
@@ -99,6 +94,7 @@ public class ActivityPartakeImpl extends BaseActivityPartake {
                         return Result.buildResult(Constants.ResponseCode.NO_UPDATE);
                     }
                     //插入领取活动信息
+                    logger.info("插入领取活动：activityId:{},activityName:{},strategyId:{},takeCount:{},userTakeLeftCount:{},uId:{},date:{},takeId{}",bill.getActivityId(),bill.getActivityName(),bill.getStrategyId(), bill.getTakeCount(), bill.getUserTakeLeftCount(), partake.getuId(), partake.getPartakeDate(), takeId);
                     userTakeActivityRepository.takeActivity(bill.getActivityId(),bill.getActivityName(),bill.getStrategyId(), bill.getTakeCount(), bill.getUserTakeLeftCount(), partake.getuId(), partake.getPartakeDate(), takeId);
                 } catch (DuplicateKeyException e) {
                     status.setRollbackOnly();
@@ -138,6 +134,7 @@ public class ActivityPartakeImpl extends BaseActivityPartake {
 
                     //保存抽奖信息
                     userTakeActivityRepository.saveUserStrategyExport(drawOrder);
+                    logger.info("saveUserStrategyExport 成功");
                 } catch (DuplicateKeyException e) {
                     status.setRollbackOnly();
                     logger.error("记录中奖单，唯一索引冲突 activityId： {} uid:{}",drawOrder.getActivityId(),drawOrder.getuId());

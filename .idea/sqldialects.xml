@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="SqlDialectMappings">
+    <file url="file://$PROJECT_DIR$/lottery-interfaces/src/main/resources/mybatis/mapper" dialect="MySQL" />
+  </component>
+  <component name="SqlResolveMappings">
+    <file url="PROJECT" scope="{&quot;node&quot;:{  &quot;@negative&quot;:&quot;1&quot;,  &quot;group&quot;:{   &quot;@kind&quot;:&quot;root&quot;,   &quot;node&quot;:{    &quot;name&quot;:{     &quot;@qname&quot;:&quot;bd2aaf6f-5763-4a8d-ae3e-cbf747a6f3f7&quot;    },    &quot;group&quot;:{     &quot;@kind&quot;:&quot;schema&quot;,     &quot;node&quot;:{      &quot;name&quot;:{       &quot;@qname&quot;:&quot;lottery&quot;      },      &quot;name&quot;:{       &quot;@qname&quot;:&quot;lottery_01&quot;      },      &quot;name&quot;:{       &quot;@qname&quot;:&quot;lottery_02&quot;      }     }    }   }  } }}" />
+  </component>
+</project>

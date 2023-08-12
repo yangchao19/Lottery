@@ -47,7 +47,7 @@ public class LotteryActivityBooth implements ILotteryActivityBooth {
             DrawProcessResult drawProcessResult = activityProcess.doDrawProcess(new DrawProcessReq(drawReq.getuId(), drawReq.getActivityId()));
             if (!Constants.ResponseCode.SUCCESS.getCode().equals(drawProcessResult.getCode())) {
                 logger.error("抽奖，失败（抽奖过程异常）uId：{} activityId:{}",drawReq.getuId(),drawReq.getActivityId());
-                return new DrawRes(drawProcessResult.getCode(),drawProcessResult.getCode());
+                return new DrawRes(drawProcessResult.getCode(),drawProcessResult.getInfo());
             }
 
             //2.数据转换

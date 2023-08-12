@@ -179,4 +179,27 @@ public class UserStrategyExport {
     public void setMqState(Integer mqState) {
         this.mqState = mqState;
     }
+
+    @Override
+    public String toString() {
+        return "UserStrategyExport{" +
+                "id=" + id +
+                ", uId='" + uId + '\'' +
+                ", activityId=" + activityId +
+                ", orderId=" + orderId +
+                ", strategyId=" + strategyId +
+                ", strategyMode=" + strategyMode +
+                ", grantType=" + grantType +
+                ", grantDate=" + grantDate +
+                ", grantState=" + grantState +
+                ", mqState=" + mqState +
+                ", awardId='" + awardId + '\'' +
+                ", awardType=" + awardType +
+                ", awardName='" + awardName + '\'' +
+                ", awardContent='" + awardContent + '\'' +
+                ", uuid='" + uuid + '\'' +
+                ", createTime=" + createTime +
+                ", updateTime=" + updateTime +
+                '}';
+    }
 }

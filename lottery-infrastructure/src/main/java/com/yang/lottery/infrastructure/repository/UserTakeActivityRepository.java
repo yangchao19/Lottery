@@ -80,7 +80,7 @@ public class UserTakeActivityRepository implements IUserTakeActivityRepository {
         if (null == userTakeLeftCount) {
             userTakeActivity.setTakeCount(1);
         } else {
-            userTakeActivity.setTakeCount(takeCount - userTakeLeftCount);
+            userTakeActivity.setTakeCount(takeCount - userTakeLeftCount + 1);
         }
         userTakeActivity.setStrategyId(strategyId);
         userTakeActivity.setState(Constants.TaskState.NO_USED.getCode());
@@ -97,7 +97,7 @@ public class UserTakeActivityRepository implements IUserTakeActivityRepository {
         userTakeActivity.setuId(uId);
         userTakeActivity.setActivityId(activityId);
         userTakeActivity.setTakeId(takeId);
-
+        logger.info("锁定抽奖单");
         return userTakeActivityDao.lockTackActivity(userTakeActivity);
     }
 
@@ -117,7 +117,7 @@ public class UserTakeActivityRepository implements IUserTakeActivityRepository {
         userStrategyExport.setAwardName(drawOrder.getAwardName());
         userStrategyExport.setAwardContent(drawOrder.getAwardContent());
         userStrategyExport.setUuid(String.valueOf(drawOrder.getOrderId()));
-
+        logger.info("保存中奖结果"+ userStrategyExport.toString()+"到：userStrategyExport 表");
         userStrategyExportDao.insert(userStrategyExport);
     }
 
