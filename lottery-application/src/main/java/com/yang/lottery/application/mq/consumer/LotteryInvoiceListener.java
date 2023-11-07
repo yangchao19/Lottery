@@ -21,7 +21,7 @@ import javax.annotation.Resource;
 import java.util.Optional;
 
 /**
- * @description:
+ * @description: 消费者异步发奖
  * @author：杨超
  * @date: 2023/4/17
  * @Copyright：

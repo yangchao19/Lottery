@@ -2,6 +2,7 @@ package com.yang.lottery.rpc.activity.deploy;
 
 import com.yang.lottery.rpc.activity.deploy.req.ActivityPageReq;
 import com.yang.lottery.rpc.activity.deploy.res.ActivityRes;
+import com.yang.lottery.rpc.activity.deploy.res.StrategyRes;
 
 /**
  * @description: 抽奖活动活动部署服务接口
@@ -16,4 +17,12 @@ public interface ILotteryActivityDeploy {
      * @return    查询结果
      */
     ActivityRes queryActivityListByPageForErp(ActivityPageReq req);
+
+
+    /**
+     * 通过活动id查询策略明细
+     * @param activityId
+     * @return
+     */
+    StrategyRes queryStrategyDetailByActivityId(Long activityId);
 }

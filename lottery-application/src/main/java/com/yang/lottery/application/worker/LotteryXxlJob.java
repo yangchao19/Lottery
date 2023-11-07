@@ -1,6 +1,6 @@
 package com.yang.lottery.application.worker;
 
-import ch.qos.logback.classic.pattern.ClassNameOnlyAbbreviator;
+
 import com.alibaba.fastjson.JSON;
 import com.xxl.job.core.context.XxlJobHelper;
 import com.xxl.job.core.handler.annotation.XxlJob;

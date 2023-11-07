@@ -128,7 +128,7 @@ public class ActivityPartakeImpl extends BaseActivityPartake {
                     int lockCount = userTakeActivityRepository.lockTackActivity(drawOrder.getuId(),drawOrder.getActivityId(),drawOrder.getTakeId());
                     if (0 == lockCount) {
                         status.setRollbackOnly();
-                        logger.error("记录中奖单，个人参与活动抽奖次数已耗完 activityId ；{} uId： {}",drawOrder.getActivityId(),drawOrder.getActivityId());
+                        logger.error("记录中奖单，个人参与活动抽奖次数已耗完 activityId ；{} uId： {}",drawOrder.getActivityId(),drawOrder.getuId());
                         return Result.buildResult(Constants.ResponseCode.NO_UPDATE);
                     }
 

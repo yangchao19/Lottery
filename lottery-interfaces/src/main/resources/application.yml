@@ -37,7 +37,7 @@ mybatis:
 # nacos 配置中心
 nacos:
   discovery:
-    server-addr: 124.222.253.96:8848
+    server-addr: 43.143.31.48:8848
 
 # Dubbo 广播方式配置
 dubbo:
@@ -45,7 +45,7 @@ dubbo:
     name: Lottery
     version: 1.0.0
   registry:
-    address: nacos://124.222.253.96:8848
+    address: nacos://43.143.31.48:8848
   protocol:
     name: dubbo
     port: 20880
@@ -98,7 +98,7 @@ spring:
   # redis.conf protected-mode yes 改为 protected-mode no
   redis:
     database: 0
-    host: 124.222.253.96
+    host: 43.143.31.48
     port: 6379
     password:
     timeout: 3000

@@ -6,13 +6,16 @@ import com.yang.lottery.common.Result;
 import com.yang.lottery.domain.activity.model.aggregates.ActivityInfoLimitPageRich;
 import com.yang.lottery.domain.activity.model.req.ActivityInfoLimitPageReq;
 import com.yang.lottery.domain.activity.model.vo.ActivityVO;
-import com.yang.lottery.domain.activity.service.deploy.IActivityDeploy;
-import com.yang.lottery.infrastructure.po.Activity;
+import com.yang.lottery.domain.strategy.model.aggregates.StrategyRich;
+import com.yang.lottery.domain.strategy.model.vo.StrategyDetailBriefVO;
+import com.yang.lottery.domain.strategy.repository.IStrategyRepository;
 import com.yang.lottery.interfaces.assember.IMapping;
 import com.yang.lottery.rpc.activity.deploy.ILotteryActivityDeploy;
 import com.yang.lottery.rpc.activity.deploy.dto.ActivityDTO;
+import com.yang.lottery.rpc.activity.deploy.dto.StrategyDTO;
 import com.yang.lottery.rpc.activity.deploy.req.ActivityPageReq;
 import com.yang.lottery.rpc.activity.deploy.res.ActivityRes;
+import com.yang.lottery.rpc.activity.deploy.res.StrategyRes;
 import org.apache.dubbo.config.annotation.Service;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -35,7 +38,15 @@ public class LotteryActivityDeploy implements ILotteryActivityDeploy {
     private IActivityDeployProcess activityDeploy;
 
     @Resource
+    private IStrategyRepository strategyRepository;
+
+    @Resource
     private IMapping<ActivityVO, ActivityDTO> activityMapping;
+
+    @Resource
+    private IMapping<StrategyDetailBriefVO, StrategyDTO> strategyMapping;
+
+
 
     @Override
     public ActivityRes queryActivityListByPageForErp(ActivityPageReq req) {
@@ -69,5 +80,16 @@ public class LotteryActivityDeploy implements ILotteryActivityDeploy {
             logger.error("活动部署分页数据查询失败 erpId：{} reqStr：{}",req.getErpId(), JSON.toJSON(req), e);
             return new ActivityRes(Result.buildErrorResult());
         }
+    }
+
+    @Override
+    public StrategyRes queryStrategyDetailByActivityId(Long strategyId) {
+        StrategyRich strategyRich = strategyRepository.queryStrategyRich(strategyId);
+        List<StrategyDetailBriefVO> strategyDetailList = strategyRich.getStrategyDetailList();
+        List<StrategyDTO> strategyDTOList = strategyMapping.sourceToTarget(strategyDetailList);
+        StrategyRes strategyRes = new StrategyRes();
+        strategyRes.setStrategyList(strategyDTOList);
+        strategyRes.setResult(Result.buildSuccessResult());
+        return strategyRes;
     }
 }
